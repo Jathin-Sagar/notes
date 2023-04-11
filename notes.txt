@@ -1,1 +1,11 @@
 DevOps Notes
+lsblk to display block devices
+lsblk -a To display empty block devices.  
+lsblk -b print size in bits
+lsblk -z print zone model
+lsblk -d skip slave entries
+lsblk -i to use ascii characters for tree formation
+lsblk -m  To print information about device owner, group, and mode of block devices.  
+lsblk -o SIZE,NAME,MOUNTPOINT To print selected columns of block-devices. 
+lsblk -dn hide column headings
+lsblk -help display help section
