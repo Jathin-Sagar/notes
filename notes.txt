@@ -1,4 +1,5 @@
 DevOps Notes
+<<lsblk
 lsblk to display block devices
 lsblk -a To display empty block devices.  
 lsblk -b print size in bits
@@ -9,8 +10,9 @@ lsblk -m  To print information about device owner, group, and mode of block devi
 lsblk -o SIZE,NAME,MOUNTPOINT To print selected columns of block-devices. 
 lsblk -dn hide column headings
 lsblk -help display help section
-
-tar (tape archive)
+lsblk
+<<tar 
+(tape archive)
 the command iThe tar command is often used for creating compressed archive files that can be easily transferred or stored. It can compress multiple files into a single archive file, and the resulting archive can be compressed using different compression algorithms like gzip, bzip2, and xz to reduce its size.s used for creating archive and extracting the archive files it was originally used to create backups to tape drives.
 tar cvf create,verbose so it gets update, filename(flag) file.tar hello.txt it shown in the red colour, it is a uncompresed tar archive.
 tar xvf file.tar extracts files through archives
@@ -29,4 +31,49 @@ wildcards are referred to as a wildcard character or wild character in Linux. It
 Typically, wildcards are either a question mark (?) which illustrates an individual character or an asterisk (*) which illustrates multiple characters.
 tar tvf file.tar --wildcards '*.png' finding a .png image
  tar --delete -f file.tar hello.txt to remove files and a tar archive.
- 
+tar
+<<cronjobs  
+
+A scheduling tool is a software application or program used to automate and manage tasks that need to be performed at specific times or intervals. Scheduling tools are commonly used to streamline and optimize workflows, reduce errors, and save time and effort for users.
+
+There are many types of scheduling tools available, ranging from simple task scheduling tools like the Unix cron utility to more complex project management software and workflow automation platforms.
+
+Scheduling tools typically allow users to set up recurring tasks, assign resources, and set deadlines or timelines for completion. They may also include features for tracking progress, sending notifications or reminders, and generating reports or analytics.
+
+Some common types of scheduling tools include:
+
+Calendar and appointment scheduling tools: These tools allow users to schedule appointments, meetings, and other events. They may include features for sending reminders, tracking attendance, and rescheduling appointments if needed.
+
+Task scheduling tools: These tools allow users to schedule and automate routine tasks, such as data backups, software updates, or system maintenance tasks.
+
+Project management tools: These tools are designed to manage project timelines, deadlines, and milestones. They may include features for scheduling tasks, assigning resources, and tracking progress towards project goals.
+
+Workforce management tools: These tools are used to manage staff schedules, assign tasks, and track employee time and attendance. They may also include features for managing payroll, benefits, and other HR functions.
+
+Overall, scheduling tools are essential for managing complex workflows and ensuring that tasks are completed efficiently and on time. They are used in a wide range of industries and settings, including business, education, healthcare, and government.
+Crontab Operators
+Cron syntax also utilizes operators for performance. Operators are large inland that operates effectively on the Cron attribute values. The operators are discussed below-
+
+Asterisk operator (*)
+The asterisk operator denotes any significance or already. Suppose you see an asterisk (*) in the Hour domain, it implies the job will be done every hour. It represents all values. Utilization of this operator is to gather operating for the entire month or week.
+
+Comma Operator (,)
+You can stipulate a range of items for regurgitation using the comma operator. It also defines distinct unique values.
+
+For Instance, if you enter 2,5,8 in the Hour domain, the assignment will execute at 2 a.m., 5 a.m., and 8 a.m.
+
+Hyphen Operator (-)
+You can stipulate a set of outcomes using the hyphen operator. If you enter 2-5 in the Weekday domain, the assignment will execute every weekday (From Tuesday to Friday). It also represents a set of parameters.
+
+Forward slash Operator (/)
+The slash operator allows you to specify values that will be repeated over a specific interval between them. This operator can also be used to separate a number into various stages.
+
+For example, if you have */4 in the Hour field, it means the action will be performed every four hours.
+
+It is also equivalent as clarifying 0,4,8,12,16,20. You can utilize a range of data rather than an asterisk even before the slash operator.
+
+For example, 1-30/10 indicates the similar as 1,11,21.
+
+
+
+
