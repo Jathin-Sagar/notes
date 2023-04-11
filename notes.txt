@@ -9,3 +9,24 @@ lsblk -m  To print information about device owner, group, and mode of block devi
 lsblk -o SIZE,NAME,MOUNTPOINT To print selected columns of block-devices. 
 lsblk -dn hide column headings
 lsblk -help display help section
+
+tar (tape archive)
+the command iThe tar command is often used for creating compressed archive files that can be easily transferred or stored. It can compress multiple files into a single archive file, and the resulting archive can be compressed using different compression algorithms like gzip, bzip2, and xz to reduce its size.s used for creating archive and extracting the archive files it was originally used to create backups to tape drives.
+tar cvf create,verbose so it gets update, filename(flag) file.tar hello.txt it shown in the red colour, it is a uncompresed tar archive.
+tar xvf file.tar extracts files through archives
+tar cvzf file.tar.gz hello.txt it makes a tar file kown as file.tar.gz it is the archive of hello.txt file
+tar xvzf file.tar.gz it is used to extract the files through file.tar.gz archives file
+tar cvfj file.tar.tbz hello.txt making compressed tar files with the -j option
+tar -xvf file.tar -c / tar -xvf file.tar  path of directory used to untar( command which enable the users to extract files that are compressed with tar ,tar.gz)
+tar -jxvf file.tar.tbz "hello.txt" untar multiple .tar.tbz, .tar.gz, .tar extract more than one file
+tar -czf - file.tar./gz/tbz | wc -c it is used to see the size of archive files in kilobytes
+tar rvf file.tar hello.txt updating an existing tar file
+tar tf file.tar list the whole archive files
+tar -tvf file.tar view the archive
+tar tvf file.tar hello.txt  view the archived files with their information
+tar tvf file.tar | grep "file.txt" help us to only list the mentioned image or text in grep through archived files.
+wildcards are referred to as a wildcard character or wild character in Linux. It is a symbol that is used for representing or replacing multiple characters.
+Typically, wildcards are either a question mark (?) which illustrates an individual character or an asterisk (*) which illustrates multiple characters.
+tar tvf file.tar --wildcards '*.png' finding a .png image
+ tar --delete -f file.tar hello.txt to remove files and a tar archive.
+ 
