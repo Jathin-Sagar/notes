@@ -113,7 +113,45 @@ sed 'y/abc/def/' exm.txt  transfering the characters
 sed '=' exm.txt  printing the line number
 sed -n '/mango/=' exm.txt  it will display the line number with the word mango
 sed
+<<awk
+The awk command is used for text processing in Linux. Although, the sed command is also used for text processing, but it has some limitations, so the awk command becomes a handy option for text processing. It provides powerful control to the data.
 
+The Awk is a powerful scripting language used for text scripting. It searches and replaces the texts and sorts, validates, and indexes the database.
+awk '{ print "Welcome to awk command"}' The above command will print the inputted string every time we execute the command. Press CTRL+D key to terminate the program
+cat > student.txt  
+Sam CS  
+Daniel IT  
+John IT  
+Arya IT  
+Mike ECE  
+Helena ECE  
+awk '/cs/ {print}' student.txt list the students with specific patterns like cs ece first we need to create file with cat
+awk '{print}' student.txt to see all the files
+awk '{print $1,$5}' student.txt this command will print the column 1 and 5
+NR: It is used to show the current count of the lines. The awk command performs action once for each line. These lines are said as records.
+
+NF: It is used to count the number of fields within the current database.
+
+FS: It is used to create a field separator character to divide fields into the input lines.
+
+OFS: It is used to store the output field separator. It separates the output fields.
+
+ORS: It is used to store the output record separator. It separates the output records. It prints the content of the ORS command automatically.
+awk '{print NR $2}' student.txt display line number and column of the given number
+awk '{print $NF}' student.txt print the last fileld of the file
+awk 'BEGIN { ORS ="-"} {print $0}' student.txt seperate the output by _underscore
+awk 'BEGIN { for(i=1;i<=8;i++) print "square of", i, "is",i*i; }' print the square of 1 to 8.
+Sam,75,100  
+Daniel,80,100  
+John,74,100  
+Arya,85,100  
+Mike,70,100   
+Helena,74,100 
+awk -F"," '{x+=$3}END{print x}' student.txt  to find out the total marks of the students
+awk -F, '{a[$1]+=$2;}END{for(i in a)print i", "a[i];}' student.txt print the individual's name with his marks
+awk 'BEGIN{x=exp(8); print x}'   print the value of exp 8
+
+awk
 
 
 
