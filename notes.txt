@@ -75,7 +75,7 @@ It is also equivalent as clarifying 0,4,8,12,16,20. You can utilize a range of d
 For example, 1-30/10 indicates the similar as 1,11,21.
 
 <<unzip
-through cmd and also in the system we can unzip the files,we can extracting compressed files from a ZIP archive. ZIP files are a popular format for compressing and packaging files together, making them easier to transfer and store.
+through cmd and also in the system (graphical interface)we can unzip the files,we can extracting compressed files from a ZIP archive. ZIP files are a popular format for compressing and packaging files together, making them easier to transfer and store.
 The primary reason for using ZIP files is to save storage space and reduce transfer. 
 unzip archive.zip this command is used to unzip the files
 unzip archive.zip -d myfiles this command is used to unzip file and save in a directory
