@@ -82,6 +82,37 @@ unzip archive.zip -d myfiles this command is used to unzip file and save in a di
 unzip archive.zip file.txt unzipig the file and saving as text files
 unzip
 
+<<sed
+The sed command (short for "stream editor") is a powerful utility in Linux and other Unix-based operating systems that can be used to modify text files.
+
+The sed command is designed to read input files (either from standard input or from one or more files) and apply a set of commands to the text. The commands can be used to perform a wide range of text transformations, such as:
+
+Replacing text: You can use the s command to search for a pattern in the text and replace it with a new string. For example, the command sed 's/hello/goodbye/' will replace all occurrences of the word "hello" with "goodbye" in the input text.
+
+Deleting lines: You can use the d command to delete lines that match a particular pattern. For example, the command sed '/pattern/d' will delete all lines that contain the pattern.
+
+Inserting text: You can use the i command to insert new text before a specified line. For example, the command sed '2i\New line' will insert the text "New line" before the second line of the input text.
+
+Appending text: You can use the a command to append new text after a specified line. For example, the command sed '2a\New line' will append the text "New line" after the second line of the input text.
+
+Transforming text: You can use regular expressions and other sed commands to transform text in a wide range of ways.
+
+The sed command can be used in combination with other Linux utilities to perform complex text processing tasks. It is a powerful tool for manipulating text files and automating text processing tasks on the command line
+echo class7 | sed 's/class/jtp/'  here class is changed to jtp
+echo class7 | sed 's/7/10/'    in this 7 is changed to 10
+ cat msg.txt | sed 's/learn/study/'    in the text file we changed lern word to study
+echo class7 class9 | sed 's/class/jtp/g' here /' it only edits one file /g' it changes all the files to jtp   
+cat msg.txt | sed 's/learn/study/g'   it only edits one text /g' it changes all the texts to study
+cat msg.txt | sed '/jtp/d'    deleting line of jtp    
+sed -e 's/red/blue/; s/yellow/black/' exm.txt  modifing multiple sed command
+sed -f SedCommands exm.txt   we have used commands applied to the earlier example. So, the output is the same as the previous example
+sed '3s/Red/Blue/' exm.txt  at which line we need to change we use this red is changed to blue
+echo "Another Demo" | sed 'i\First Demo'  it will append the text
+sed '3c\This is a modified line.' exm.txt  modifing the lines 
+sed 'y/abc/def/' exm.txt  transfering the characters
+sed '=' exm.txt  printing the line number
+sed -n '/mango/=' exm.txt  it will display the line number with the word mango
+sed
 
 
 
