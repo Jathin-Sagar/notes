@@ -170,3 +170,13 @@ uname -i print the platform of hardware
 uname -o print the name of the operating system
 uname
 
+<<$
+$$ pid of the current shell
+$! pid if last background command
+$? existing status of the last command executed
+$0 filenam eof the current script
+$n/1/2 these variable corresponds to the argument with which a script was invoked.her n is a positive decimal number corresponding to the position of an argument ex 1st is 1 2nd s 2
+$# number of arguments supplied to a script
+$* all the arguments are double quotes,if the script recives 2 arguments then $* is equalent to $1 $2
+$@all the arguments are individually double quoted if a script recives two arguments $@ is equivalent to$1 $2
+$
