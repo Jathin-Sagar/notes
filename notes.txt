@@ -190,11 +190,33 @@ echo "{A}" is an example of a string literal that contains the character sequenc
 
 In summary, echo {A} generates a list of strings using brace expansion and prints the resulting string to the terminal, while echo "{A}" simply prints a string literal to the terminal without any expansion.
 echo {A} and echo "{A}"
+{A} it has some expansion ,"{A}" it don't have any expansion
 
 << #!/bin/bash
+#!/bin/ env bash
+The main difference between the two is that #!/usr/bin/bash specifies the absolute path to the Bash interpreter, while #!/usr/bin/env bash uses the env command to locate the Bash interpreter in the user's PATH environment variable.Using #!/usr/bin/bash assumes that Bash is installed in the /usr/bin/ directory, which may not always be the case on different systems. On some systems, Bash may be installed in a different directory, which could cause the script to fail.
 
-
+Using #!/usr/bin/env bash is a more portable option as it searches for the Bash interpreter in the PATH environment variable, which is a list of directories that the shell searches for executables. This makes the script more adaptable to different systems and makes it easier to maintain.
+#!/bin/env bash
 #!/bin/bash
 
+#verify user root or not
+we use whoami command to find this if we are on root it will show us you are on root if we are on user it will show it is on user
+
+#difference between [] and [[]]
+[ and [[ can be used for conditional expressions, [[ is a more powerful and flexible option that is specific to Bash. [ is more portable and can be used in other shells.
+#set -n, set -x, set -e, and set +x are all options that can be used in Bash shell scripts to modify the behavior of the shell.
+
+set -n (or set -o noexec) prevents the execution of commands in the script. When this option is set, the shell reads and checks the syntax of the script, but does not execute any of the commands. This can be useful for checking the syntax of a shell script without actually running it.
+
+set -x (or set -o xtrace) enables tracing of commands in the script. When this option is set, the shell prints each command to the terminal as it is executed, preceded by the value of the PS4 variable (which defaults to +).
+
+set -e (or set -o errexit) causes the script to exit immediately if any command exits with a non-zero status (i.e., if an error occurs). This can be useful for catching errors early in the script and preventing unintended consequences.
+
+set +x disables tracing of commands in the script. This option is used to turn off the set -x option when it is no longer needed.
+
+It is worth noting that these options are not exclusive and can be used together in a script. For example, it is common to use set -e and set -x together to catch errors and trace the execution of a script at the same time. The options can be set and unset as needed throughout the script using the set command.
 
 
+
+ 
