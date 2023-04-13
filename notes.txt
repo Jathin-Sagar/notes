@@ -171,6 +171,7 @@ uname -o print the name of the operating system
 uname
 
 <<$
+echo is used infront of all the variables
 $$ pid of the current shell
 $! pid if last background command
 $? existing status of the last command executed
@@ -179,4 +180,6 @@ $n/1/2 these variable corresponds to the argument with which a script was invoke
 $# number of arguments supplied to a script
 $* all the arguments are double quotes,if the script recives 2 arguments then $* is equalent to $1 $2
 $@all the arguments are individually double quoted if a script recives two arguments $@ is equivalent to$1 $2
-$
+$SHELL is a special shell variable that contains the pathname of the user's preferred shell.
+cat /etc/shells  The list of all the shells which are currently installed in our Linux system is stored in the ‘shells’ file which is present in /etc folder of the system. It has read-only access by default and is modified automatically whenever we install a new shell in our system. As we can see, the cat command displays the various installed shells along with their installation paths.
+
