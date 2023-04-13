@@ -200,8 +200,17 @@ Using #!/usr/bin/env bash is a more portable option as it searches for the Bash 
 #!/bin/env bash
 #!/bin/bash
 
-#verify user root or not
-we use whoami command to find this if we are on root it will show us you are on root if we are on user it will show it is on user
+<<verify user root or not
+The command $(id -u)" -eq 0 is used to check if the current user has root privileges (i.e., is the superuser or administrator).
+
+In Unix-based systems, every user is assigned a unique numeric user ID (UID) that is used to identify the user. The root user (superuser or administrator) has a UID of 0, while regular users have UIDs that are greater than 0.
+
+The id -u command is used to retrieve the UID of the current user. The $() syntax is used to capture the output of the command and use it as a variable. The expression " -eq 0" is a comparison operator that checks if the UID is equal to 0.
+
+So, when the command $(id -u)" -eq 0 is executed, it returns a value of 0 if the current user has root privileges, and a value of 1 (or some other non-zero value) if the current user does not have root privileges.
+
+This command is commonly used in shell scripts to perform actions that require root privileges, such as installing software, modifying system settings, or accessing restricted files and directories. By checking if the current user has root privileges before performing such actions, the script can avoid potential errors or security risks.
+verify user root or not
 
 #difference between [] and [[]]
 [ and [[ can be used for conditional expressions, [[ is a more powerful and flexible option that is specific to Bash. [ is more portable and can be used in other shells.
@@ -226,7 +235,9 @@ It is worth noting that these options are not exclusive and can be used together
 In general, /etc/profile is used to set global environment variables, such as the PATH variable, which specifies the directories that the system will search when looking for executable programs. It may also set variables that are specific to certain applications or services that are installed on the system.
 
 Since /etc/profile is executed for all users when they log in, it is important to be careful when making changes to this file, as they may affect all users on the system. It is a good practice to back up the file before making any changes, and to test any changes in a non-production environment before applying them to a live system.
+  --it gives us inbuilt information about the root privileges in a script formate.
 /etc/profile 
+
 
 
 
