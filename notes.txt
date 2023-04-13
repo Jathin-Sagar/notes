@@ -154,9 +154,9 @@ awk 'BEGIN{x=exp(8); print x}'   print the value of exp 8
 awk
 <<ls
 ls > bharath in this all the files contains in the directory is shown in bharath with cat jathin we can see it
-1/2 &> sai now the file is getting created we can see it by using less or more command but , we can use gedit it opens the file in the folder  , 1 > sai for this we get the command not found
+1>&and percentile directory (standared output stdout)/2 &>and percentile directory (standared error stderr) sai now the file is getting created we can see it by using less or more command but , we can use gedit it opens the file in the folder  , 1 > sai for this we get the command not found
 ls
-
+1 > filename 2 >& 1 in this both the standard output and standard error is send to the file name
 <<uname
 The command ‘uname‘ displays the information about the system
 uname -a  It prints all the system information in the following order: Kernel name, network node hostname, kernel release date, kernel version, machine hardware name, hardware platform, operating system
