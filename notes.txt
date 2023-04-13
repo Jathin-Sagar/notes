@@ -182,4 +182,19 @@ $* all the arguments are double quotes,if the script recives 2 arguments then $*
 $@all the arguments are individually double quoted if a script recives two arguments $@ is equivalent to$1 $2
 $SHELL is a special shell variable that contains the pathname of the user's preferred shell.
 cat /etc/shells  The list of all the shells which are currently installed in our Linux system is stored in the ‘shells’ file which is present in /etc folder of the system. It has read-only access by default and is modified automatically whenever we install a new shell in our system. As we can see, the cat command displays the various installed shells along with their installation paths..
+In Unix-like operating systems, echo {A} and echo "{A}" are different in terms of how the shell performs brace expansion and variable expansion.
+<< echo {A} and echo "{A}"
+echo {A} is an example of brace expansion, which is a feature of many Unix shells that allows you to generate a list of strings by specifying a pattern inside curly braces. In this case, the pattern is a single character "A", so brace expansion generates a list that contains just the string "A". When you run the echo command with this argument, it simply prints the string "A" to the terminal.
+
+echo "{A}" is an example of a string literal that contains the character sequence "{A}". When you run the echo command with this argument, it simply prints the string "{A}" to the terminal, without any further expansion or processing.
+
+In summary, echo {A} generates a list of strings using brace expansion and prints the resulting string to the terminal, while echo "{A}" simply prints a string literal to the terminal without any expansion.
+echo {A} and echo "{A}"
+
+<< #!/bin/bash
+
+
+#!/bin/bash
+
+
 
