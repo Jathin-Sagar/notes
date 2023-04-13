@@ -152,6 +152,21 @@ awk -F, '{a[$1]+=$2;}END{for(i in a)print i", "a[i];}' student.txt print the ind
 awk 'BEGIN{x=exp(8); print x}'   print the value of exp 8
 
 awk
+<<ls
+ls > bharath in this all the files contains in the directory is shown in bharath with cat jathin we can see it
+1/2 &> sai now the file is getting created we can see it by using less or more command but , we can use gedit it opens the file in the folder  , 1 > sai for this we get the command not found
+ls
 
-
+<<uname
+The command ‘uname‘ displays the information about the system
+uname -a  It prints all the system information in the following order: Kernel name, network node hostname, kernel release date, kernel version, machine hardware name, hardware platform, operating system
+uname -s print kernal name
+uname -n print hostname
+uname -r print kernal release date
+uname -v version of the current kernel
+uname -m print machine hardware name
+uname -p print machine processor
+uname -i print the platform of hardware
+uname -o print the name of the operating system
+uname
 
