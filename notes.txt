@@ -242,6 +242,22 @@ Since /etc/profile is executed for all users when they log in, it is important t
 The uniq command in Linux is a command-line utility that reports or filters out the repeated lines in a file. 
 In simple words, uniq is the tool that helps to detect the adjacent duplicate lines and also deletes the duplicate lines. uniq filters out the adjacent matching lines from the input file(that is required as an argument) and writes the filtered data to the output file. 
 uniq murali.txt example
+ 
+
+-c – -count : It tells how many times a line was repeated by displaying a number as a prefix with the line.
+-d – -repeated : It only prints the repeated lines and not the lines which aren’t repeated.
+-D – -all-repeated[=METHOD] : It prints all duplicate lines and METHOD can be any of the following: 
+none : Do not delimit duplicate lines at all. This is the default.
+prepend : Insert a blank line before each set of duplicated lines.
+separate : Insert a blank line between each set of duplicated lines.
+-f N – -skip-fields(N) : It allows you to skip N fields(a field is a group of characters, delimited by whitespace) of a line before determining the uniqueness of a line.
+-i – -ignore case : By default, comparisons done are case sensitive but with this option case insensitive comparisons can be made.
+-s N – -skip-chars(N) : It doesn’t compare the first N characters of each line while determining uniqueness. This is like the -f option, but it skips individual characters rather than fields.
+-u – -unique : It allows you to print only unique lines.
+-z – -zero-terminated : It will make a line end with 0 bytes (NULL), instead of a newline.
+-w N – -check-chars(N) : It only compares N characters in a line.
+– – help : It displays a help message and exit.
+– – version : It displays version information and exit.
 
 uniq
 
