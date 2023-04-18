@@ -238,6 +238,12 @@ Since /etc/profile is executed for all users when they log in, it is important t
   --it gives us inbuilt information about the root privileges in a script formate.
 /etc/profile 
 
+<<uniq
+The uniq command in Linux is a command-line utility that reports or filters out the repeated lines in a file. 
+In simple words, uniq is the tool that helps to detect the adjacent duplicate lines and also deletes the duplicate lines. uniq filters out the adjacent matching lines from the input file(that is required as an argument) and writes the filtered data to the output file. 
+uniq murali.txt example
+
+uniq
 
 
 
