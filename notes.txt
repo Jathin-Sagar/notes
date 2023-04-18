@@ -260,7 +260,16 @@ separate : Insert a blank line between each set of duplicated lines.
 – – version : It displays version information and exit.
 
 uniq
+ 
+<<alias
+alias command instructs the shell to replace one string with another string while executing the commands. 
 
+When we often have to use a single big command multiple times, in those cases, we create something called as alias for that command. Alias is like a shortcut command which will have same functionality as if we are writing the whole command. 
+alias 1="cd Documents"
+unalias 1
+alias -p it will show all the aliases
+
+alias
 
 
 
