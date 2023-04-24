@@ -426,3 +426,6 @@ FTP also supports authentication mechanisms such as usernames and passwords, and
 While FTP is still widely used, it has been largely replaced by more secure and efficient protocols such as SFTP (Secure File Transfer Protocol) and FTPS (FTP over SSL/TLS).
 
 ftp
+<<scp
+scp (secure copy) command in Linux system is used to copy file(s) between servers in a secure way. The SCP command or secure copy allows secure transferring of files in between the local host and the remote host or between two remote hosts. It uses the same authentication and security as it is used in the Secure Shell (SSH) protocol. SCP is known for its simplicity, security and pre-installed availability.
+scp
