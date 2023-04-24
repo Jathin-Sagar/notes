@@ -408,3 +408,21 @@ wget -r -A.<fileType> <webURL>	Download certain file type
 wget -o <logFile> <URL>	Redirect downloading file to the log file
 
 wget
+<<curl
+The curl command is a powerful command-line tool for transferring data to and from web servers. It supports a wide range of protocols, including HTTP, HTTPS, FTP, SMTP, and more.
+Some of the common use cases for the curl command include:
+Downloading files from the web: curl can be used to download files from web servers via HTTP, HTTPS, FTP, and other protocols.
+Uploading files to the web: curl can also be used to upload files to web servers, such as for backup or synchronization purposes.
+Debugging web services: curl can be used to test and debug web services, by sending requests and receiving responses from web servers.
+Automating web-related tasks: curl can be used to automate various web-related tasks, such as monitoring website availability, testing web application functionality, and more.
+Overall, curl is a versatile and powerful tool for working with web servers, and it can be particularly useful for automation and scripting of web-related tasks.
+
+curl
+<<ftp
+FTP stands for File Transfer Protocol. It is a standard protocol used for transferring files over the internet between computers. FTP is commonly used for uploading and downloading files to and from web servers.
+FTP works by establishing a connection between a client (such as a web browser or FTP client software) and a server (such as a web server or FTP server). The client sends commands to the server to initiate file transfers, create and delete directories, and perform other operations.
+FTP supports two modes of operation: active and passive. In active mode, the client initiates the data connection to the server, while in passive mode, the server initiates the data connection to the client. Passive mode is more commonly used today, as it is more firewall-friendly.
+FTP also supports authentication mechanisms such as usernames and passwords, and can use encryption to secure the data being transferred.
+While FTP is still widely used, it has been largely replaced by more secure and efficient protocols such as SFTP (Secure File Transfer Protocol) and FTPS (FTP over SSL/TLS).
+
+ftp
