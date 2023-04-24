@@ -390,3 +390,21 @@ In port bonding, two or more network ports on a device are linked together to fo
 Port bonding is commonly used in high-performance computing environments, data centers, and other settings where high network bandwidth and reliability are critical. It allows for improved network redundancy, load balancing, and fault tolerance, which can result in improved network performance and uptime.
 
 portbonding
+
+<<wget
+
+Option	Function
+wget <URL>	Download single file
+wget -O <fileName> <URL>	Store with a different file name
+wget --limit-rate=<Numberk> <URL>	Specify download rate/speed
+wget -c <URL>	Complete the remaining downloaded file
+wget -b <URL>	Download in background
+wget --tries=<Number> <URL>	Set retrying attempts
+wget -i <fileName>	Download multiple files
+wget --mirror -p --convert-links -P ./local dir <webURL>	Download full website
+wget --reject=<rejectingFile> <URL>	Reject a type of file
+wget -Q<Value>m -i <fileName>	Quit downloading on exceeding certain limit
+wget -r -A.<fileType> <webURL>	Download certain file type
+wget -o <logFile> <URL>	Redirect downloading file to the log file
+
+wget
