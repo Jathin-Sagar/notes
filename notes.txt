@@ -428,4 +428,11 @@ While FTP is still widely used, it has been largely replaced by more secure and 
 ftp
 <<scp
 scp (secure copy) command in Linux system is used to copy file(s) between servers in a secure way. The SCP command or secure copy allows secure transferring of files in between the local host and the remote host or between two remote hosts. It uses the same authentication and security as it is used in the Secure Shell (SSH) protocol. SCP is known for its simplicity, security and pre-installed availability.
+scp –P port: Specifies the port to connect on the remote host.
+scp –p: Preserves modification times, access times, and modes from the original file.
+scp –q: Disables the progress meter.
+scp –r: Recursively copy entire directories.
+scp –S program: Name of program to use for the encrypted connection. The program must understand ssh(1) options.
+scp –v: Verbose mode. Causes scp and ssh to print debugging messages about their progress. This is helpful in debugging connection, authentication, and configuration problems.
+
 scp
