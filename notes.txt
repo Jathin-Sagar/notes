@@ -374,3 +374,14 @@ ping -c 5 -M want www.geeksforgeeks.org It is a simple protocol to find out the 
 ping -c 5 -t 64 www.geeksforgeeks.org It is maximum hop a packet can travel before getting discarded.A value 0 will restricts packet to same host.
 
 ping
+
+<<ethtool
+ethtool is a networking utility on Linux. It is used to configure Ethernet devices on Linux. ethtool can also be used to find a lot of information about connected Ethernet devices on your Linux computer.Ethtool is a Linux command line tool used to view and modify various parameters of the network interface controllers (NICs) on a system. It allows you to gather information about the NIC's driver, firmware version, link status, speed, duplex, and more. Additionally, ethtool can be used to configure various settings of the NIC, such as the speed and duplex mode, auto-negotiation, and wake-on-LAN (WOL) settings. Ethtool can be useful for diagnosing and troubleshooting network connectivity issues, as well as for optimizing network performance by fine-tuning the NIC's settings.
+sudo ethtool --version you can check whether ethtool is installed already
+sudo ethtool enp6s0 a lot of information about the network interface card
+sudo ethtool -i enp6s0  to check for the driver used by one of your NIC
+sudo ethtool -S enp6s0 Display Network Usage Statistics with ethtool:
+
+ethtool
+
+
