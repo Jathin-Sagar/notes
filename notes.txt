@@ -270,9 +270,22 @@ unalias 1
 alias -p it will show all the aliases
 
 alias
+<<sort
+sort weeks.txt  to sort the files in alphabetical order.
+sort -k1 states.txt If a file has more than one column, column number is used to sort a specific column.
+sort -n -k2 marks.txt Numeric sorting is different from alphabetical sorting. For numeric sorting option 'n' is used along with the column number if required.
 
+sort
 
+<<uniq
+sort dupil.txt | uniq remove repeated lines
+sort dupil.txt | uniq -c counts the number of times a word is repeating.
+sort dupil.txt | uniq -d only the displayed lines 
+sort dupil.txt | uniq -u only display the uniq lines
+sort dupil.txt | uniq -s 2 ignore the first 2 characters 
+uniq -f 2 dupil.txt The above command will not compare the first two fields from the file dupli.txt.
 
+uniq
 
 
 
