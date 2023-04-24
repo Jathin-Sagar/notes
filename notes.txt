@@ -286,8 +286,36 @@ sort dupil.txt | uniq -s 2 ignore the first 2 characters
 uniq -f 2 dupil.txt The above command will not compare the first two fields from the file dupli.txt.
 
 uniq
+<< port number
+A port number is a 16-bit unsigned integer that identifies a specific process to which a network message should be delivered within a computer network. It is used to distinguish between different network services that may be running on the same network device, such as a computer or a router.
 
+port
+<<tcp
+TCP (Transmission Control Protocol) is used for providing reliable and ordered delivery of data between applications running on hosts communicating over an IP network. Some of the main uses of TCP are:
+Web browsing: When you visit a website using a web browser such as Chrome or Firefox, the browser establishes a TCP connection with the web server to request and receive the web page content. TCP ensures that the content is delivered reliably and in the correct order.
+Email: When you send or receive email, your email client (such as Outlook or Gmail) uses TCP to establish a connection with the mail server and exchange email messages reliably and in the correct order.
+File transfers: When you download or upload files over the internet using protocols such as FTP or SFTP, TCP is used to ensure that the files are transferred reliably and in the correct order.
+Online gaming: Many online games use TCP to send and receive data between game clients and servers, to ensure that the game data is delivered reliably and in the correct order.
+Overall, TCP is widely used in applications that require reliable and ordered data delivery, where the integrity and order of the data are critical for the proper functioning of the application.
+tcp
+<<udp
+UDP (User Datagram Protocol) is a connectionless transport layer protocol in the Internet Protocol (IP) suite. Unlike TCP, UDP does not provide reliable delivery of data or guarantee that the data will be received in the correct order. UDP is used in applications where speed and efficiency are more important than reliability and ordered delivery.
+Some common uses of UDP are:
+Real-time multimedia applications: Applications such as voice over IP (VoIP), video conferencing, and online gaming often use UDP to transmit real-time data because of its low latency and fast transmission speed. In these applications, it is more important to have real-time delivery of data than to ensure that every packet is received and in order.
+DNS (Domain Name System): UDP is used by the DNS protocol to quickly resolve domain names to IP addresses. When you type a domain name into your web browser, your computer sends a DNS query to a DNS server over UDP to obtain the IP address of the server that hosts the website.
+DHCP (Dynamic Host Configuration Protocol): UDP is used by DHCP to assign IP addresses to devices on a network. When a new device joins a network, it sends a DHCP request over UDP to a DHCP server, which assigns it an IP address.
+SNMP (Simple Network Management Protocol): SNMP is used to monitor and manage network devices such as routers, switches, and servers. UDP is used by SNMP to send management information between devices.
+Overall, UDP is used in applications where speed and efficiency are more important than reliability and ordered delivery, and where occasional loss or duplication of packets is acceptable.
+udp
 
+<<sctp
+SCTP (Stream Control Transmission Protocol) is a transport layer protocol that is designed to provide reliable, ordered, and flow-controlled delivery of messages between two endpoints. SCTP was developed as an alternative to TCP and UDP and is used in applications that require higher reliability and better congestion control than TCP, while also providing multi-homing support and improved security compared to UDP.
+Some common uses of SCTP are:
+Telecommunications: SCTP is used in telecommunications networks to transport signaling messages between network elements, such as switches and gateways. The reliable, ordered, and flow-controlled delivery of messages provided by SCTP ensures that signaling messages are delivered correctly and in the right order.
+Real-time multimedia applications: SCTP is also used in real-time multimedia applications, such as voice and video conferencing, where the reliability and ordered delivery of messages is critical for maintaining the quality of the media stream.
+Electronic payment systems: SCTP is used in electronic payment systems, such as credit card payment gateways, to ensure that payment transactions are processed securely and reliably.
+Industrial control systems: SCTP is used in industrial control systems to transport control messages between devices in industrial networks. The reliable and ordered delivery of messages provided by SCTP is important for ensuring the safety and reliability of industrial processes.
+Overall, SCTP is used in applications that require high reliability and improved congestion control, while also providing multi-homing support and improved security.
 
-
+sctp
  
