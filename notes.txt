@@ -384,4 +384,9 @@ sudo ethtool -S enp6s0 Display Network Usage Statistics with ethtool:
 
 ethtool
 
+<<portbonding
+Port bonding, also known as link aggregation or network bonding, is a technique used in computer networking to combine multiple physical network connections into a single logical connection. This is done to increase the overall bandwidth and reliability of the network connection.
+In port bonding, two or more network ports on a device are linked together to form a single high-bandwidth connection. This can be accomplished using different techniques, such as Round-Robin, where the traffic is distributed equally between the ports, or Link Aggregation Control Protocol (LACP), which provides automatic detection and configuration of the port bonding.
+Port bonding is commonly used in high-performance computing environments, data centers, and other settings where high network bandwidth and reliability are critical. It allows for improved network redundancy, load balancing, and fault tolerance, which can result in improved network performance and uptime.
 
+portbonding
