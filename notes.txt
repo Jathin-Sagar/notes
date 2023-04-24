@@ -436,3 +436,17 @@ scp –S program: Name of program to use for the encrypted connection. The progr
 scp –v: Verbose mode. Causes scp and ssh to print debugging messages about their progress. This is helpful in debugging connection, authentication, and configuration problems.
 
 scp
+
+<<rsync
+rsync or remote synchronization is a software utility for Unix-Like systems that efficiently sync files and directories between two hosts or machines. One of them being the source or the local-host from which the files will be synced, the other one being the remote-host, on which synchronization will take place. There are basically two ways in which rsync can copy/sync data:
+Copying/syncing to/from another host over any remote shell like ssh, rsh.
+Copying/Syncing through rsync daemon using TCP.
+Rsync is famous for its delta-transfer algorithm, in which it copies only the differences between the source files present in the local-host and the existing files in the destination or the remote host.
+rsync local-file user@remote-host:remote-file
+rsync Documents/ it will show list same as ls -l
+rsync -avh Documents/ jathin The above command will copy/sync all the files and directories present in directory Documents to directory jathin. If the destination directory is not present (here jathin), rsync automatically creates one and copies all the data in it.
+rsync -avhze ssh /foo user@remote-host:/tmp/Rsync using ssh: There are two different ways for rsync to contact a remote system:
+Using a remote-shell program as the transport(such as ssh(Secure Shell) or rsh(Remote Shell)).
+Contacting an rsync daemon directly via TCP.
+rsync -avhe ssh --chown=USER:GROUP /foo user@remote-host:/tmp/Rsync with particular file permissions: If we want to sync files to the local or remote host with the permissions of the files being changed. The following command must be used.
+rsync
