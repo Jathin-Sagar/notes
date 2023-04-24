@@ -340,6 +340,37 @@ Industrial control systems: SCTP is used in industrial control systems to transp
 Overall, SCTP is used in applications that require high reliability and improved congestion control, while also providing multi-homing support and improved security.
 
 sctp
+<<ifup
+The ifup command basically brings the network interface up, allowing it to transmit and receive data. Technically ifup command is used to configure network interfaces based on interface definitions in the file /etc/network/interfaces.
+sudo ifup -av , sudo is used for permissions, -a to work on all devices and v for verbose the output.
+-a(–all): If used this option it affects all the interfaces marked as auto. Brings up interfaces in order they are defined /etc/network/interfaces. Combined with –allow, acts on all interfaces of a specified class instead.
+–force: Force configuration or deconfiguration of the interface.
+-V: Prints the version information.
+-v: Verbose the output as they are executed.
+ifup
+<<ifdown
+ ifdown command to bring network interface down, not allowing the user to transmit and receive data. Technically it places the network interface in a state where it cannot transmit or receive data. It is used to configure network interfaces based on interface definitions in the file /etc/network/interfaces.
+sudo ifdown -av , sudo is used for permissions, -a to work on all devices and v for verbose the output.
+-a(–all): This option is used to bring all the interface down which are defined in /etc/network/interfaces.
+–allow=CLASS: This option will only allow interfaces listed in an allow-CLASS line in /etc/network/interfaces to be acted upon.
+-v(–verbose): Show or verbose commands as they are executed.
+-V(–version): Prints the Copyright and version information.
 
-
+ifdown
  
+<<ping
+PING (Packet Internet Groper) command is used to check the network connectivity between host and server/host. This command takes as input the IP address or the URL and sends a data packet to the specified address with the message “PING” and get a response from the server/host this time is recorded which is called latency. Fast ping low latency means faster connection. Ping uses ICMP(Internet Control Message Protocol) to send an ICMP echo message to the specified host if that host is available then it sends ICMP reply message. Ping is generally measured in millisecond every modern operating system has this ping pre-installed. 
+sudo ping -v To get ping version installed on your system. 
+ping www.geeksforgeeks.org To stop pinging we should use ctrl+c otherwise it will keep on sending packets. 
+ping -c 5 www.geeksforgeeks.org Controlling the number of pings
+ping -s 40 -c 5 www.geeksforgeeks.org Controlling the size of packets send
+ping -i 2 www.geeksforgeeks.org Changing the time interval
+ping -c 5 -q www.geeksforgeeks.org To get only summary
+ping -w 3 www.geeksforgeeks.org To Timeout PING
+ping -f www.geeksforgeeks.org To send packets as soon as possible. This is used to test network performance. 
+ping -c 5 -W 3 www.geeksforgeeks.org Sets time to wait for a response. 
+ping -c 5 -p ff www.geeksforgeeks.org We can fill data in packet using -p option. Like -p ff will fill packet with ones.
+ping -c 5 -M want www.geeksforgeeks.org It is a simple protocol to find out the maximum MTU(Maximum Transmission Unit) a TCP path can take. 
+ping -c 5 -t 64 www.geeksforgeeks.org It is maximum hop a packet can travel before getting discarded.A value 0 will restricts packet to same host.
+
+ping
