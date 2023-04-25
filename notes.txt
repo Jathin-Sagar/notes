@@ -564,5 +564,98 @@ Standardization: LDAP is an open standard, which means that it is widely support
 Overall, the use of LDAP in Linux provides a centralized and efficient way to manage directory-related information, making it an essential component of many enterprise environments.
 ldap
 
+<<fdisk
+fdisk is a command-line utility used in Linux and other Unix-like operating systems for managing disk partitions. It is used to create, delete, resize, and modify partitions on a hard disk.
+When you run the fdisk command, it displays the partition table of the specified disk. You can then use various commands to create, delete, or modify partitions. Some of the commonly used commands in fdisk are:
+n: Used to create a new partition
+d: Used to delete a partition
+p: Used to print the partition table
+w: Used to write the changes to the disk
+Here's an example of how to use fdisk to create a new partition on a hard disk:
+Open a terminal and type sudo fdisk /dev/sda to launch fdisk and specify the hard disk you want to partition (in this case, /dev/sda).
+Type p to print the current partition table and make sure there is unallocated space on the disk.
+Type n to create a new partition.
+Follow the prompts to specify the partition type, start and end sectors, and other options.
+Type w to write the changes to the disk and exit fdisk.
+After creating the new partition, you can use the mkfs command to format the partition with a filesystem such as ext4 or NTFS, and then mount the partition to make it accessible.
+fdisk
+<<lvm
+LVM stands for Logical Volume Manager, a tool used for managing disk storage in Linux and other Unix-like operating systems. LVM provides a layer of abstraction between the physical disks and the file systems, allowing you to create, resize, and move logical volumes (LVs) dynamically without affecting the underlying physical disks or file systems.
+Here are the main components of LVM:
+Physical Volume (PV): A physical disk or disk partition that is used by LVM. Each PV is divided into one or more physical extents (PEs).
+Volume Group (VG): A collection of one or more PVs that are combined into a single storage pool. A VG can be resized by adding or removing PVs.
+Logical Volume (LV): A virtual disk that is created from one or more PEs in a VG. An LV can be resized or moved to a different PV within the same VG.
+LVM Metadata: A small portion of the disk space that is reserved for storing information about the LVM configuration, such as the location of the PVs and LVs.
+LVM provides several benefits, including:
+Flexibility: LVM allows you to manage storage space dynamically, without the need to repartition the physical disks or move data between them.
+Resilience: LVM provides features such as mirroring (RAID-1) and striping (RAID-0) to protect against disk failures.
+Performance: LVM can improve disk I/O performance by allowing you to stripe data across multiple disks.
+To use LVM, you need to install the LVM packages and create PVs, VGs, and LVs using the pvcreate, vgcreate, and lvcreate commands, respectively. You can then format the LVs with a file system and mount them as you would with regular disks.
+lvm
+<<fsck
+fsck stands for File System Consistency Check. It is a command-line utility in Linux and other Unix-like operating systems that checks and repairs the consistency of a filesystem. When a filesystem is not unmounted cleanly or is not shut down properly, there may be inconsistencies in the filesystem, such as lost files, corrupted data, or unused blocks.
+fsck can be used to scan the filesystem for inconsistencies and repair them. The fsck command can be run on both the root filesystem and on other mounted filesystems.
+The basic syntax of the fsck command is:
+fsck [options] filesystem
+Here, filesystem is the name of the filesystem to be checked. Some commonly used options for fsck are:
+-a: Automatically repair the filesystem without prompting for confirmation
+-y: Assume "yes" to all prompts and automatically repair any issues
+-r: Interactively repair the filesystem, prompting the user for confirmation before making changes
+-V: Verbose output, displaying more detailed information during the check and repair process.
+Here's an example of how to use the fsck command to check and repair a filesystem:
+Open a terminal and unmount the filesystem you want to check with the following command:
+umount /dev/sda1
+Here, /dev/sda1 is the device name of the filesystem to be checked.
+Run the fsck command with the appropriate options to check and repair the filesystem:
+fsck -y /dev/sda1
+This will automatically repair any issues found in the filesystem without prompting for confirmation.
+Once the fsck command has completed, remount the filesystem with the following command:
+mount /dev/sda1 /mnt
+Here, /mnt is the mount point for the filesystem.
+fsck
+
+<<nfs
+NFS (Network File System) is a protocol for sharing files between Linux and Unix systems over a network. It allows you to mount remote file systems on your local machine and access them as if they were part of your local file system. With NFS, you can share files and directories between multiple servers and clients, making it a popular choice for file sharing in enterprise environments.
+
+To use NFS, you need to have the NFS server and client packages installed on your Linux system. Once you have installed the required packages, you can configure NFS to share a directory on the server and mount it on the client machine.
+
+Here are the basic steps to configure NFS on Linux:
+
+Install the NFS server and client packages on the server and client machines respectively.
+
+Create a directory that you want to share on the server machine and set the appropriate permissions for it. For example:
+
+bash
+Copy code
+mkdir /shared
+chmod 777 /shared
+Configure the NFS server by editing the /etc/exports file and adding an entry for the directory to be shared. For example:
+
+bash
+Copy code
+/shared 192.168.1.0/24(rw,sync,no_subtree_check)
+Here, /shared is the directory to be shared, 192.168.1.0/24 is the IP address range of the clients that are allowed to access the shared directory, and rw (read-write), sync, and no_subtree_check are the mount options for the shared directory.
+
+Restart the NFS server to apply the changes:
+
+Copy code
+systemctl restart nfs-server
+On the client machine, mount the shared directory using the mount command. For example:
+
+bash
+Copy code
+mount -t nfs server:/shared /mnt
+Here, server is the IP address or hostname of the NFS server and /mnt is the local mount point for the shared directory.
+
+Access the shared directory on the client machine and verify that you can read and write files to it.
+
+NFS is a powerful and flexible protocol that can be used for a variety of file sharing use cases. However, it is important to ensure that proper security measures are in place to prevent unauthorized access to shared files and directories.
+nfs
+
+<<samba server
+   
+samba server
+
+
 
 
