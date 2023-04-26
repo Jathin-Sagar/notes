@@ -708,3 +708,45 @@ A relative path, on the other hand, specifies the location of a file or director
 Relative paths are often shorter and easier to read than absolute paths, but they can be more prone to errors if the current working directory is not known or changes frequently. Absolute paths, on the other hand, are always unambiguous and provide a complete specification of the location of a file or directory in the file system.
 relative path
 
+<<inode
+An Inode number is a uniquely existing number for all the files in Linux and all Unix type systems.
+When a file is created on a system, a file name and Inode number is assigned to it.
+Generally, to access a file, a user uses the file name but internally file name is first mapped with respective Inode number stored in a table.
+Note: Inode doesn't contain the file name. Reason for this is to maintain hard-links for the files. When all the other information is separated from the file name then only we can have various file names pointing to the same Inode.
+inode
+
+<<soft link
+Symbolic Links
+What is a Symbolic Link:
+A symbolic or soft link is a string which is the pathname of the original file, in other words, a shortcut as we know it in Windows Operating System. This kind of link references virtual or path location of the original file but not the physical location.
+
+Properties
+The filename in the soft link is in essence the pathname to the original file, therefore the size of this link is only the length name of the file link. It is not the size of the original file.
+
+Advantages:
+The main advantage, as we just saw, is that it will not take much space since its size will be smaller.
+Another advantage is that it can be created for directories and for different file systems.
+
+Disadvantages:
+Some real big disadvantages are that if the file is renamed, moved or deleted the link-file will become useless becoming a hanging link.
+
+Command:
+$ ln -s [original filename] [link name]
+softlink
+
+<<hard link
+What is a Hard Link?
+The first way is with a Hard Link. This way of making a connection is through what is called the indode, which is in essence is the reference to the physical location of the file. This means that the link-file has the same indode value as the original-file, making it a sort of "moving copy of the original-file".
+
+Properties:
+The properties of the hard link are that the link-file has the same size as the original file since it is a reference to the same location of the original file therefore not only a reference to it but also the same properties.
+
+Advantages:
+Since it is a reference to the file's physical location and not just to its current location, the link will remain available and will not be affected even if the original file is moved, renamed or deleted. In other words, if any of this things occur, the link-file will still access the information in the original file. The link-file will still work.
+
+Disadvantages:
+Hard Link's main disadvantage is it can not be created for a directory nor it can be created for files on different file systems.
+
+Command:
+$ ln [original filename] [link name]
+hard link
