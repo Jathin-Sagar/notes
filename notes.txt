@@ -699,8 +699,12 @@ It is generally recommended to use the root account sparingly and only when nece
 root
 
 <<absolute path
-
+In computing, an absolute path and a relative path are two ways of specifying the location of a file or directory in a file system.
+An absolute path specifies the exact location of a file or directory from the root directory of the file system. It begins with a forward slash (/) on Unix-based systems (such as Linux) or a drive letter followed by a backslash (\) on Windows systems. For example, the absolute path of a file called myfile.txt located in the /home/user/documents directory on a Linux system would be /home/user/documents/myfile.txt.
 absolute path
 
-
+<<relative path
+A relative path, on the other hand, specifies the location of a file or directory relative to the current working directory. It does not begin with a forward slash or a drive letter. Instead, it uses one or two dots (. and ..) to indicate the current directory and the parent directory, respectively. For example, if the current working directory is /home/user, the relative path to a file called myfile.txt located in the documents directory would be documents/myfile.txt.
+Relative paths are often shorter and easier to read than absolute paths, but they can be more prone to errors if the current working directory is not known or changes frequently. Absolute paths, on the other hand, are always unambiguous and provide a complete specification of the location of a file or directory in the file system.
+relative path
 
