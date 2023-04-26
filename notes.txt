@@ -685,6 +685,22 @@ Access the shared directory and verify that you can read and write files to it.
 Samba is a powerful and flexible protocol that can be used for a variety of file sharing use cases. However, it is important to ensure that proper security measures are in place to prevent unauthorized access to shared files and directories.
 samba server
 
+<<root
+In Linux, "root" is the superuser account that has complete control over the system. The root user can perform any system task, including installing and removing software, modifying system files and settings, and managing user accounts and permissions.
+By default, the root account is disabled in most Linux distributions, and users are encouraged to use regular user accounts for everyday tasks. This is because running as root can be dangerous if a user accidentally executes a command that could harm the system or compromise its security.
+To use the root account in Linux, you typically need to first enable it and set a password. This can be done by running the following command:
+Copy code
+sudo passwd root
+You will be prompted to enter a new password for the root account. Once the password is set, you can switch to the root account using the su (short for "switch user") command:
+Copy code
+su -
+You will be prompted to enter the root password. After entering the password, you will be logged in as the root user and can perform any task with full system privileges.
+It is generally recommended to use the root account sparingly and only when necessary, and to use regular user accounts with restricted permissions for everyday tasks. This can help to minimize the risk of accidental damage to the system and improve overall security.
+root
+
+<<absolute path
+
+absolute path
 
 
 
