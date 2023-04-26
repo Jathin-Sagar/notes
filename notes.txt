@@ -544,7 +544,7 @@ Overall, the use of a firewall is to protect a network from unauthorized access 
 
 firewall
 
-<<ladp
+<<ldap
 LDAP (Lightweight Directory Access Protocol) is a protocol used for accessing and maintaining distributed directory information services over an IP network. LDAP is commonly used in enterprise environments to centralize the management of user accounts, passwords, and other directory-related information.
 
 In Linux, OpenLDAP is a popular implementation of the LDAP protocol that provides a lightweight and efficient way to manage user accounts and other directory-related information. OpenLDAP can be used to authenticate users and provide single sign-on capabilities across multiple systems and applications.
