@@ -750,3 +750,17 @@ Hard Link's main disadvantage is it can not be created for a directory nor it ca
 Command:
 $ ln [original filename] [link name]
 hard link
+
+<<ack
+What is ACL ?
+Access control list (ACL) provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions for any user or group to any disc resource.
+Use of ACL :
+Think of a scenario in which a particular user is not a member of group created by you but still you want to give some read or write access, how can you do it without making user a member of group, here comes in picture Access Control Lists, ACL helps us to do this trick.
+Basically, ACLs are used to make a flexible permission mechanism in Linux.
+From Linux man pages, ACLs are used to define more fine-grained discretionary access rights for files and directories.
+setfacl and getfacl are used for setting up ACL and showing ACL respectively.
+acl
+
+<<wildcards
+
+wildcards
