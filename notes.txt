@@ -772,3 +772,7 @@ A question mark matches a single character once. For example, "c?mp" matches "ca
 Open and close brackets ( [ ] ) in a wildcard
 With Unix shells, Windows PowerShell, and programming languages that support regular expressions, the open and close bracket wildcards match a single character in a range. For example, [a-z] matches any character "a" through "z," which means anything not in that range, like a number, would not be matched.
 wildcards
+
+
+hi
+
