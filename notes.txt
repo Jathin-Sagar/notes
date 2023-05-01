@@ -778,3 +778,15 @@ gzip file.txt it is used to decrease the size of the file
 gzip -d file.txt.gz it is used to unzip the file
 gzip
 
+<<java life cycle
+The Java application life cycle can be illustrated as in Figure 4.1, “The Java Life Cycle”. We can use any text editor to create the high-level Java text file. This file is saved as a .java file on the disk. We then compile this text file using the Java compiler, which result in a .class file being created on the disk. The .class file contains the bytecodes. The file is then loaded into memory by the class loader. The bytecode verifier confirms that the bytecodes are valid and not hostile. Finally, the JVM reads the bytecodes in memory and translates them into machine code.
+you can see image in downloads
+Writing the Java Program: In this phase, a programmer writes a Java program using any text editor or Integrated Development Environment (IDE) such as Eclipse, NetBeans, or IntelliJ IDEA.
+Compiling the Java Program: In this phase, the Java source code is compiled into Java bytecode by the Java Compiler. The Java Compiler verifies the syntax and correctness of the Java code and generates Java bytecode that can be executed by the Java Virtual Machine (JVM).
+Loading: In this phase, the class loader loads the bytecode of the compiled Java program into the JVM's memory.
+Linking: In this phase, the JVM verifies the bytecode to ensure that it is valid and that all dependencies are resolved. It also allocates memory for the class variables and initializes them with their default values.
+Initialization: In this phase, the static variables and static blocks of the Java program are initialized.
+Execution: In this phase, the main method of the Java program is invoked, and the Java program starts executing. The Java program executes its code line by line until it terminates or throws an exception.
+Unloading: In this phase, the JVM removes the Java program's bytecode and frees the memory allocated by it.
+These phases represent the typical Java program lifecycle, which is performed automatically by the JVM.
+java life cycle
