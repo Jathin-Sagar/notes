@@ -820,3 +820,14 @@ JVM is responsible for allocating the necessary memory needed by the Java progra
 JVM is responsible for deallocating memory space.
 
 jvm
+
+<<java application
+mobile application- build android os
+web based application- gmail,facebook etc
+gaming application-2d games
+distributed application-google myntra tcs 
+cloud based application-building of aws etc
+scientific application- scientfic calculations , mathematical calculations
+enterprise and business application- clubs charity banks
+desktop gui application - awt(abstract window toolkit),swing developing by using api(application program interface)
+java application
