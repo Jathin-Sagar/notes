@@ -831,3 +831,17 @@ scientific application- scientfic calculations , mathematical calculations
 enterprise and business application- clubs charity banks
 desktop gui application - awt(abstract window toolkit),swing developing by using api(application program interface)
 java application
+
+<<java properties
+simple
+object oriented
+Platform Independent and Architecture Neutral
+portability
+high performance
+multithreaded
+secure
+robust
+distributed
+Interpreted
+java properties
+
