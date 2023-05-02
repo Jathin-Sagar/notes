@@ -794,6 +794,8 @@ The overall aim of the Java lifecycle is to execute a Java program in a reliable
 During each phase of the Java lifecycle, various checks and verifications are performed to ensure that the Java program is executed correctly and safely. For example, the Java compiler checks the syntax and correctness of the Java code, the class loader loads the bytecode of the compiled Java program into the JVM's memory, and the JVM verifies the bytecode to ensure that it is valid and that all dependencies are resolved.
 By following the Java lifecycle, Java programs can be executed in a consistent and predictable manner, regardless of the underlying platform or operating system. The Java lifecycle also provides a secure execution environment, with built-in mechanisms for memory management, exception handling, and security. Overall, the aim of the Java lifecycle is to ensure that Java programs are executed efficiently, reliably, and securely.
 
+#installing of java in ubuntu
+
 sudo apt install default-jre it is used for java installation in ubuntu system
 whereis java to see where is java installed
 sudo apt list --installed to see the list of installed java
@@ -845,3 +847,47 @@ distributed
 Interpreted
 java properties
 
+<<java project structure
+source code - project structure- dependencies/libraries -test
+
+
+<<maven
+https://www.tutorialspoint.com/maven/maven_overview.htm
+when code is written in java we need to deploy it java is written ,if server dont have java it wont work
+it is based on pom (project object model all the project related information) it is in xml(extensible markup language) file
+with maven we add dependencies(whatsapp - internet we have whatsapp we cat use without internet)
+all the code cant be deployed so the code is converted intko jar or war
+jar --> only java
+war -->  along with java we have xml,html
+ear --> combination of jar and ear
+it is mostly used for java projects
+maven is written in java
+build tools
+.net : visual stdio
+c,c++: make file
+java : Ant,maven,gradle
+
+uses of maven 
+it makes project easy to built
+easy to add new dependencies
+maven architecture
+the tool helps get the right jar files for each project as there may be different versions of separate packages
+source code -work space here we have goals mvn test mvn compile this is goal, after completing of this we get zar file ,we keep this jar file in local repo,from local repo to we can keep it in central or remote repo
+maven life cycle
+generate a resource - source code 
+compile code - mvn compile 
+test - mvn test
+package - mvn package converting into jar file
+install -mvn install jar file is in local repo
+deploy (to server)
+maven installation
+java -version
+mvm --version if we dont have it wont shown the it will ask to install or else
+$ wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+$ tar -xvf apache-maven-3.6.3-bin.tar.gz
+$ mv apache-maven-3.6.3 /opt/
+use this commands
+maven built phases
+
+
+maven
