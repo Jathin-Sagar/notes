@@ -888,6 +888,20 @@ $ tar -xvf apache-maven-3.6.3-bin.tar.gz
 $ mv apache-maven-3.6.3 /opt/
 use this commands
 maven built phases
+-build lifecycle consists of phases
+validate check all the things
+compile
+test
+package .zar,.war
+install jar to local repo   
+deploy to deploy to remote repo
+artifact id is a project name - and group of projects
+
+target older
+
+In Maven, the target directory is the default location where the build output is generated. When you run the mvn package command, Maven compiles your Java source code, runs any necessary tests, and packages the compiled code and resources into a distributable format such as a JAR or WAR file. The resulting build artifacts are stored in the target directory.
+The contents of the target directory vary depending on the type of project being built and the plugins being used. For a standard Java project, the target directory typically contains the compiled Java classes, resource files, and any other files generated during the build process. If the project is a web application, the target directory may also contain a packaged WAR file.
+
 
 
 maven
