@@ -1033,5 +1033,15 @@ sudo ufw allow 'Nginx Full'
 sudo ufw allow 'Nginx HTTP'  
 sudo ufw allow 'Nginx HTTPS'  
 systemctl status nginx
+NGINX is a web server, reverse proxy, and load balancer that is used to serve web content and handle high traffic volumes. It is widely used in production environments to enhance the performance, reliability, and security of web applications. With NGINX, you can efficiently distribute incoming traffic across multiple servers, cache static content, terminate SSL/TLS connections, and perform a range of other functions that are critical for web application delivery. NGINX is known for its high-performance, low-resource utilization, and easy configurability, making it a popular choice for many web development teams.
+
+#nginx AS a reverse proxy
+As a reverse proxy, Nginx can be used for a variety of purposes such as:
+Load balancing: Nginx can distribute incoming traffic across multiple backend servers, helping to balance the load and increase performance and reliability.
+SSL termination: Nginx can terminate SSL/TLS connections, offloading the processing of encryption/decryption from backend servers.
+Caching: Nginx can cache content in memory or on disk, reducing the load on backend servers and improving response times for clients.
+Compression: Nginx can compress content before sending it to clients, reducing the amount of data that needs to be transferred over the network.
+Security: Nginx can act as a firewall, protecting backend servers from malicious traffic by blocking requests that do not meet certain criteria.
+URL rewriting: Nginx can rewrite URLs, allowing requests to be directed to different backend servers based on the requested path or other criteria.
 
 nginx
