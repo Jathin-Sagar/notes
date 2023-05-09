@@ -959,13 +959,25 @@ RestartSec=10
 Restart=always
 
 [Install]
-WantedBy=multi-user.target
-sudo systemctl daemon-reload
-sudo systemctl start tomcat
-sudo systemctl enable tomcat
-sudo ufw allow 8080/tcp
-http://<YourIPAddress>:8080
-tomcat log location
+java -version (first check the java version)
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.74/bin/apache-tomcat-9.0.74.tar.gz  (we need to search in the web and need to find the required tom cat and we need to copy the link)
+tar -xzf apache-tomcat-9.0.74.tar.gz (This is a command that extracts the contents of a compressed file named apache-tomcat-9.0.74.tar.gz in the current directory. The command has three options:
+•  -x means extract the files from the archive.
+•  -z means decompress the archive using gzip.
+•  -f means use the following filename as the archive name)
+sudo mkdir /opt/tomcat (making tomcat directory in opt)
+sudo mv apache-tomcat-9.0.74/* /opt/tomcat/ (moving download file to the tomcat directory)
+cd /opt/tomcat/ (going to the file)
+cd conf (opening conf)
+sudo nano tomcat-users.xml (here we need to add some data in it to get login <role rolename="admin-gui"/>
+<user username="jathin" password="Kawasakininja@123" roles="admin-gui"/>
+in place of admin we can add manger also some time with manager we are getting issue)
+cd bin (we need to go to the been by comming back) 
+sh startup.sh (we need to run the startup.sh  file)
+sudo nano /etc/tomcat9/tomcat-users.xml (some time we get issue we need to add data here and run in bin <role rolename="admin-gui"/>
+<user username="jathin" password="Kawasakininja@123" roles="admin-gui"/>
+)
+
 Linux: The log will be present by default at /var/log/tomcat/*.log. In some cases, you will also find it at /opt/tomcat/logs.
 Windows: In Windows, the logs will be present at the location where your software is, something like this: C:\program files\apache software foundation\apache-tomcat{ver}\logs\catalina.out
 Docker: By default, the logs will be printed to STDOUT and STDERR so that the logging agents on the nodes can get these logs and push them to a centralized place.
