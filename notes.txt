@@ -1071,3 +1071,43 @@ Security: Nginx can act as a firewall, protecting backend servers from malicious
 URL rewriting: Nginx can rewrite URLs, allowing requests to be directed to different backend servers based on the requested path or other criteria.
 
 nginx
+
+Apache vs. NGINX
+@Apache	                                       #NGINX
+@Apache runs on all Unix like systems such as Linux, BSD, etc. as well as completely supports Windows.
+#Nginx runs on modern Unix like systems; however it has limited support for Windows.
+@Apache uses a multi-threaded approach to process client requests.
+#Nginx follows an event-driven approach to serve client requests.
+@Apache cannot handle multiple requests concurrently with heavy web traffic.	
+#Nginx can handle multiple client requests concurrently and efficiently with limited hardware resources.
+@Apache processes dynamic content within the web server itself.	
+#Nginx can't process dynamic content natively.
+@Apache is designed to be a web server.
+#Nginx is both a web server and a proxy server.
+@Modules are dynamically loaded or unloaded, making it more flexible.	
+#Since modules cannot be loaded dynamically, they must be compiled within the core software itself.
+@A single thread can only process one connection.	
+#A single thread can handle multiple connections.
+@The performance of Apache for static content is lower than Nginx.
+#Nginx can simultaneously run thousands of connections of static content two times faster than Apache and uses little less memory.
+
+#application server and web server
+weserver 
+webserver is a computer system that hosts websites (website-webpages)
+runs web server software (apache,http,microsftiis) should connect through internet
+webserver in two parts sharedhosts and dedicated hosts
+webserver-webclient-sends http request -it request some page- some time the page will be find some time it wont be present in it so it contact with some static data base and give the response (-send a servlet request-servlet means java program )-and contact application server and send a sevlet request -and application server sends  http responce to the web client.
+webserver
+apache http server,iis,lightps,sunjava system web server,jigsaw server
+application server 
+a server specifically designed to run applications
+includes both hardware and software that provides an environment programs to run
+used for : 
+running web applications,hosting a hypervisor that manages virtual machines, distributing and monitorinng software updates,processing data sent from another server.
+why we use application server 
+providing processing power and  memory to run demanding applications
+also provides the environment to run specific applications
+
+<<catalina
+In the context of Apache Tomcat, Catalina refers to the core Servlet/JSP container of Tomcat. It is responsible for handling incoming requests, managing the Servlet/JSP lifecycle, and providing HTTP service. In other words, Catalina is the component that implements the Servlet and JSP specifications, and it is the part of Tomcat that makes it a Servlet container.
+catalina
