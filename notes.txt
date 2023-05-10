@@ -800,6 +800,20 @@ sudo apt install default-jre it is used for java installation in ubuntu system
 whereis java to see where is java installed
 sudo apt list --installed to see the list of installed java
 
+javac:
+javac is command or tool which is used to compile java file.It also known as java compiler(javac).
+It phisically exists in the system at java installed folder.
+To compile any java file we use it as: javac (java file name).java
+
+java:
+java  is also a command or tool just like javac but it is used to run a java file.
+It phisically exists in the system at java installed folder.
+To run any java file we use it as: java (java class name)
+
+javap:
+javap is also a command or tool(important).It is used to see the structure of any pre defined or
+user defined class.(means to see how many methods, variables, constants,constructor etc in a class)
+It phisically exists in the system at java installed folder.
 
 java life cycle
 
