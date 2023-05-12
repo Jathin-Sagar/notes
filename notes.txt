@@ -1045,7 +1045,21 @@ Tomcat access logs can give you information about who has access to your applica
 Manager Log
 These logs keep information on all the activities performed by the Tomcat manager, including lifecycle management, application deployment, etc. These logs can be configured in the logging.properties configuration file present at TOMCAT_HOME/conf.
 
+The first step is to identify the location of the Tomcat installation directory. If you have installed Tomcat from default repositories, it should be installed under the /etc/tomcat{VERSION} directory. For the manual installation, you need to find the correct location.
+Then edit server.xml file located under the Tomcat installation directory.
+sudo nano /etc/tomcat9/server.xml 
+Find the below content in the configuration file
+<Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+Replace port 8080 with your required port. For example, we are changing the default tomcat port to 8081.
+    <Connector port="8081" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+After making the above changes restart the tomcat service. You will see that now tomcat is started on port 8081 or the port you configured. Access tomcat on the new port in a web browser.
+
 tomcat
+
 <<nginx
 Nginx (pronounced "engine x") is a high-performance web server, reverse proxy, and load balancer. It is open-source software that can be used as a standalone web server or can be used to proxy HTTP requests to other web servers. Nginx is known for its ability to handle a large number of concurrent connections and its low memory footprint compared to other web servers. It is commonly used in high-traffic websites, content delivery networks (CDNs), and web applications.
 Nginx is used as a web server, reverse proxy, load balancer, and HTTP cache. It is commonly used to serve static and dynamic content, handle SSL/TLS encryption, and distribute traffic to multiple servers or applications. Nginx is often used in high-traffic websites, web applications, and APIs. It is also used as a proxy server for email protocols like IMAP, POP3, and SMTP, and for streaming media protocols like RTMP and HLS. Additionally, Nginx can be used to accelerate content delivery through its caching capabilities.
