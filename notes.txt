@@ -1173,6 +1173,7 @@ It's important to note that access privileges in PostgreSQL can be quite granula
 I hope this explanation clarifies the concept of access privileges in PostgreSQL. If you have any more specific questions, feel free to ask!
 (https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/) full data
 to open db 
+$ sudo -u postgres psql
 to create db
 create database mydb
 to switch into mydb 
