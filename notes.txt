@@ -1172,5 +1172,23 @@ Similar to granting privileges, revoking privileges can be done at different lev
 It's important to note that access privileges in PostgreSQL can be quite granular, allowing for fine-grained control over database object permissions. By properly assigning privileges to roles, you can ensure that users have the necessary access and security within your database.
 I hope this explanation clarifies the concept of access privileges in PostgreSQL. If you have any more specific questions, feel free to ask!
 (https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/) full data
+to open db 
+to create db
+create database mydb
+to switch into mydb 
+\c mydb
+to create user
+create user jathin_user with password 'jathin123';
+create role 
+create role readonly;
+ALTER ROLE jathin_user SET ROLE readonly;
+grant role
+grant role readonly to jathin_user;
+to remove role 
+revoke readonly from jathin_user
+if we need to remove the users first we need to revoke the granted permissions next we need to revoke the access privilages of the user from db
+REVOKE ALL PRIVILEGES ON DATABASE mydb FROM jathin_user;
+after this we can remove the user
+DROP ROLE jathin_user
 postgresql
 
