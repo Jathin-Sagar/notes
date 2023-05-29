@@ -1171,6 +1171,6 @@ REVOKE SELECT ON table_name FROM role_name;
 Similar to granting privileges, revoking privileges can be done at different levels.
 It's important to note that access privileges in PostgreSQL can be quite granular, allowing for fine-grained control over database object permissions. By properly assigning privileges to roles, you can ensure that users have the necessary access and security within your database.
 I hope this explanation clarifies the concept of access privileges in PostgreSQL. If you have any more specific questions, feel free to ask!
-
+(https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/) full data
 postgresql
 
