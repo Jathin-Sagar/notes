@@ -1191,5 +1191,8 @@ if we need to remove the users first we need to revoke the granted permissions n
 REVOKE ALL PRIVILEGES ON DATABASE mydb FROM jathin_user;
 after this we can remove the user
 DROP ROLE jathin_user
+
+--> how to connect server to the pg admin
+first we need to find where postgres.conf file present then we need to open the conf file and we need to find the #listen_addresses = 'localhost'	in the conf file then go to the pg admin give listen_addresses name to the server and then connect to it. in this way can connect server to the pgadmin 
 postgresql
 
