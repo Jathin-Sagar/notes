@@ -1216,3 +1216,16 @@ http://localhost:8080 search it in web
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword   ---- to get the login admin passwoed
 then press install suggested plugins
 jenkins
+
+>>docker/dockered
+difference between docker and dockered
+
+Docker:
+"Docker" is an open-source platform that allows developers to build, ship, and run applications inside containers. It provides a set of tools and a platform to create and manage containerized applications. Docker enables you to package an application and its dependencies into a single container image, making it portable and consistent across various environments.
+The Docker platform consists of several components, including the Docker CLI (Command Line Interface), Docker Engine (daemon), Docker images, and Docker containers. The Docker CLI is used to interact with the Docker daemon and manage containers and images.
+dockerd:
+"dockerd" (Docker daemon) is the core component of the Docker platform. It is a system service that runs in the background and manages Docker containers and images. The Docker daemon is responsible for building, running, and monitoring containers. It listens to requests from the Docker CLI or other Docker client tools, such as Docker Compose, and performs the requested container operations.
+In simpler terms, "dockerd" is the Docker engine that handles the actual container runtime and manages the container lifecycle. It is responsible for creating, starting, stopping, and deleting containers based on the commands issued by the Docker CLI or other Docker client tools.
+In summary, "Docker" refers to the entire containerization platform, which includes the Docker CLI and the Docker Engine (dockerd). The Docker CLI is the interface used to interact with the Docker daemon (dockerd), which handles the actual container management and runtime operations.
+
+docker/dockered
