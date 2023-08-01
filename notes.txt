@@ -1229,3 +1229,29 @@ In simpler terms, "dockerd" is the Docker engine that handles the actual contain
 In summary, "Docker" refers to the entire containerization platform, which includes the Docker CLI and the Docker Engine (dockerd). The Docker CLI is the interface used to interact with the Docker daemon (dockerd), which handles the actual container management and runtime operations.
 
 docker/dockered
+
+>>dockerdefault directory
+By default, Docker stores most of its data inside the /var/lib/docker directory on Linux systems. 
+dockerdafault
+docker info | grep "Docker Root Dir"(to see the docker default directory path)
+
+>>jenkinsdefault directory
+
+In general, Jenkins stores its data, configurations, and job information in a directory known as the "Jenkins Home" directory. The location of the Jenkins Home directory depends on the installation method and operating system. Here are some common default locations:
+Linux (Package Installation):
+When Jenkins is installed using package managers like apt (Ubuntu/Debian) or yum (CentOS/RHEL), the Jenkins Home directory is usually located at /var/lib/jenkins/.
+Windows (Installer):
+On Windows systems, the Jenkins Home directory is typically located at C:\Program Files (x86)\Jenkins.
+macOS (Installer):
+On macOS systems, the Jenkins Home directory is usually located at /Users/Shared/Jenkins/Home.
+Please note that these default locations may vary depending on the installation method and configuration. If you have installed Jenkins using a custom installer or using Docker, the Jenkins Home directory might be in a different location. Also, if you are using Jenkins in a cloud environment or a containerized setup, the directory structure could be different.
+To find the exact location of your Jenkins Home directory, you can check the Jenkins configuration file or Jenkins system settings. For example, in a Linux environment, you can find the Jenkins Home directory path in the /etc/default/jenkins file (Ubuntu/Debian) or /etc/sysconfig/jenkins file (CentOS/RHEL).
+Additionally, you can log in to your Jenkins dashboard as an administrator and navigate to "Manage Jenkins" > "Configure System." Under the "Home directory" section, you can see the path of the Jenkins Home directory.
+Keep in mind that the information provided here is based on my last update in September 2021, and the default directory for Jenkins might change in newer versions or based on updates to installation methods. For the most up-to-date information, please refer to the official Jenkins documentation or the documentation specific to your Jenkins installation.
+
+jnkinsdefault
+
+>>garbagecollection
+
+
+garbagecollection
