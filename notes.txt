@@ -1251,7 +1251,86 @@ Keep in mind that the information provided here is based on my last update in Se
 
 jnkinsdefault
 
->>garbagecollection
+>>dockered --help
+This command will display a detailed list of options and their explanations that you can use with dockerd. The available options may include configuration parameters related to network settings, storage drivers, authentication, logging, security, and more.
+Please note that the output may be lengthy, so you may want to scroll through it to find the specific options you are interested in. If you need to look up specific options or want to see the most up-to-date information, you can also refer to the Docker documentation or use the man dockerd command (on Linux) to see the manual page for dockerd.
+Keep in mind that Docker and its components may have evolved since my last update, so I recommend checking the Docker documentation or running dockerd --help on your system to get the most current and relevant information.
+dockered
 
+>>docker --help
+The output will display a list of global options that you can use with the docker command, such as --config, --context, --debug, --host, --log-level, --version, etc.
+
+Below the options, you will find a list of available Docker commands. Each command represents a specific operation or action that you can perform with Docker, such as building images, creating containers, managing networks, and more. For example, some of the commands listed are attach, build, commit, cp, create, and so on.
+
+To get more information about a specific Docker command, you can run docker COMMAND --help. Replace COMMAND with the actual command you want to learn more about. For example, docker build --help will display detailed information about the docker build command and its available options.
+
+Keep in mind that the available commands and options may vary based on the version of Docker installed on your system. If you have a newer version of Docker, the list of commands and options may be different from what is shown above. For the most up-to-date and comprehensive information, I recommend checking the Docker documentation or running docker --help on your local system.
+docker
+
+>>garbagecollection
+Docker uses layered container images, and each image layer is read-only. When a new container is created, a new writable layer is added on top of the read-only image layers. This writable layer allows changes to be made within the container without modifying the original image. This copy-on-write mechanism ensures efficient storage usage.
+Regarding garbage collection, Docker relies on the storage driver to manage the storage of container images and layers. The storage driver is responsible for removing unused image layers and freeing up space when images or containers are deleted.
+For example, if you delete a container, Docker will automatically remove the associated writable layer of that container. If an image is no longer used by any container or other images, Docker may remove that image's layers as well, depending on the storage driver configuration.
+The specific behavior and garbage collection strategy may vary based on the storage driver being used. The default storage driver for Docker on Linux systems is usually "overlay2" or "aufs," but other options like "devicemapper," "btrfs," or "zfs" might be used in different setups.
+It's essential to note that while Docker manages storage space through its storage driver, it's primarily concerned with image and container layers and not memory management within running containers. Memory management, including garbage collection for memory used by applications inside containers, is handled by the operating system and the container runtime, which is usually Docker Engine.
+For more detailed information about Docker's storage management and garbage collection, including the specifics of different storage drivers and Docker configurations, it is best to refer to the official Docker documentation or resources specific to the version and configuration of Docker you are using.
 
 garbagecollection
+
+>>systemd
+
+Systemd is a system and service manager for Linux-based operating systems. It is designed to provide a more efficient and reliable initialization and management system for the Linux kernel and user-space processes. Systemd replaces the traditional System V (SysV) init system, which was prevalent in older Linux distributions.
+Key features and components of systemd include:
+Initialization and Boot Process: Systemd is responsible for the system's initialization and boot process. It starts essential system services and manages the order in which they are launched during boot-up, making the boot process faster and more parallelized.
+Service Management: Systemd can start, stop, restart, enable, and disable system services. Services can be managed as "units" in systemd, and their configuration files usually have a .service extension. This approach simplifies service management and makes it easier to define dependencies and relationships between services.
+Dependency Management: Systemd handles dependencies between services, ensuring that necessary services are started or stopped in the correct order. This allows for more efficient parallelization during system boot and shutdown.
+Logging and Journaling: Systemd includes the systemd journal, a centralized logging system that collects and stores log data from various services and applications. The journalctl command is used to access and view these logs.
+System State Management: Systemd provides commands to manage the system's state, such as power management, system sleep and hibernate, and system shutdown.
+User Session Management: Systemd can also manage user sessions, ensuring consistent and controlled user environment setup and teardown during user logins and logouts.
+System Timer Management: Systemd offers a timer mechanism to schedule and run tasks at specific times or intervals, similar to cron jobs.
+Systemd has been widely adopted in modern Linux distributions and is known for its fast boot times, efficient parallelization, and robust service management capabilities. It has received both praise and criticism over the years, but it has become a standard part of many Linux distributions due to its widespread usage and active development.
+Systemd configuration files are located in directories such as /etc/systemd/system/ for system-level units and /usr/lib/systemd/user/ for user-level units. The main systemd configuration file is /etc/systemd/systemd.conf.
+Overall, systemd plays a critical role in modern Linux distributions, and its introduction has significantly improved the boot performance and management capabilities of Linux systems.
+systemd
+
+>>journal(vs)systemctl
+
+journalctl and systemctl are two different commands used in Linux-based systems to manage and view system-related information. They serve distinct purposes and are part of the systemd ecosystem.
+journalctl:
+journalctl is a command-line utility used to access and view logs from the systemd journal. The systemd journal is a centralized logging system that collects and stores log data generated by various services and applications running on the system. It provides a comprehensive and structured log of system events, including kernel messages, service start/stop events, and application logs.
+Key features of journalctl:
+Displays logs in a human-readable format with timestamps.
+Supports various filtering options based on time, priority, unit (service), etc.
+Allows for real-time log monitoring with the -f (follow) option.
+Can display logs from the current boot (-b) or from a specific unit (-u).
+Example usage:
+# View all logs
+journalctl
+# Display logs for a specific service (unit)
+journalctl -u nginx
+# Monitor logs in real-time
+journalctl -f
+systemctl:
+systemctl is a command-line utility used to manage the systemd system and service manager. It is used to control and interact with system services, view their status, start or stop them, enable or disable them on boot, and more. Systemd is a replacement for traditional System V (SysV) init system and provides advanced features for service management.
+Key features of systemctl:
+Controls the state of system services (start, stop, restart, enable, disable, etc.).
+Views the status of services, including whether they are running or not.
+Manages service units and can enable/disable services at boot time.
+Logs service-related output and errors.
+Example usage:
+# Start a service
+sudo systemctl start nginx
+# Stop a service
+sudo systemctl stop nginx
+# Restart a service
+sudo systemctl restart nginx
+# Enable a service to start on boot
+sudo systemctl enable nginx
+# Disable a service from starting on boot
+sudo systemctl disable nginx
+# Check the status of a service
+systemctl status nginx
+In summary, journalctl is primarily used to view and manage logs generated by the systemd journal, while systemctl is used to control and interact with system services managed by the systemd system and service manager. Both commands are essential for monitoring and managing the state of the system and its services in a Linux-based environment.
+
+journal(vs)systemctl
+
