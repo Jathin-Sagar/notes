@@ -1367,6 +1367,67 @@ file --extension GFG.rar
 For more information and usage options, you can use the following command:
 man file
 
+Regular Files
+Regular files are ordinary files on a system that contains programs, texts, or data. It is used to store information such as text, or images. These files are located in a directory/folder. Regular files contain all readable files such as text files, Docx files, programming files, etc, Binary files, image files such as JPG, PNG, SVG, etc, compressed files such as ZIP, RAR, etc. 
+
+Directory Files
+The sole job of directory files is to store the other regular files, directory files, and special files and their related information. This type of file will be denoted in blue color with links greater than or equal to 2. A directory file contains an entry for every file and sub-directory that it houses. If we have 10 files in a directory, we will have 10 entries in the directory file. We can navigate between directories using the cd command
+We can find out directory file by using the following command:
+ls -l | grep ^d 
+
+Special Files
+1. Block Files:
+Block files act as a direct interface to block devices hence they are also called block devices.  A block device is any device that performs data Input and Output operations in units of blocks. These files are hardware files and most of them are present in /dev.
+We can find out block file by using the following command:
+ls -l | grep ^b
+
+Character device files:
+A character file is a hardware file that reads/writes data in character by character in a file. These files provide a serial stream of input or output and provide direct access to hardware devices. The terminal, serial ports, etc are examples of this type of file.
+We can find out character device files by:
+ls -l | grep ^c
+
+Pipe Files:
+The other name of pipe is a “named” pipe, which is sometimes called a FIFO. FIFO stands for “First In, First Out” and refers to the property that the order of bytes going in is the same coming out. The “name” of a named pipe is actually a file name within the file system. This file sends data from one process to another so that the receiving process reads the data first-in-first-out manner.
+We can find out pipe file by using the following command:
+ls -l | grep ^p
+
+Symbol link files:
+A symbol link file is a type of file in Linux which points to another file or a folder on your device. Symbol link files are also called Symlink and are similar to shortcuts in Windows. 
+We can find out Symbol link file by using the following command:
+ls -l | grep ^l
+
+Socket Files:
+A socket is a special file that is used to pass information between applications and enables the communication between two processes. We can create a socket file using the socket() system call. A socket file is located in /dev of the root folder or you can use the find / -type s command to find socket files.
+find / -type s 
+We can find out Symbol link file by using the following command:
+ls -l | grep ^s
 
 7filetypes
+
+>>stdin stdout stderr
+stdin, stdout, and stderr are standard streams in a computer's operating system and are used for handling input and output in a program. They play an essential role in the communication between a program and its environment (user or other software). These streams are available in most programming languages and are typically associated with the console or terminal where a program is executed.
+
+stdin (Standard Input):
+stdin is the standard input stream, which is used to receive input data into a program. This input can come from the user, a file, or another program. When a program reads from stdin, it processes the data provided to it. For example, if you have a program that reads user input, the data entered by the user will be received through stdin.
+
+stdout (Standard Output):
+stdout is the standard output stream, which is used to send regular output or information from a program. When a program writes to stdout, the data is usually displayed on the console or terminal where the program is running. This allows the user to see the program's output or capture it in a file if they redirect the output. Most print statements in programming languages write to stdout.
+
+stderr (Standard Error):
+stderr is the standard error stream, which is used to send error messages or diagnostics from a program. When a program encounters an error or needs to provide some diagnostic information, it writes to stderr. Like stdout, the data written to stderr is also typically displayed on the console or terminal. However, stderr is different from stdout in that it is not affected by output redirection, so error messages are still shown on the screen even if the regular output is being redirected to a file.
+In summary, these standard streams provide a standardized way for programs to interact with their environment, allowing them to receive input, display regular output, and report errors or diagnostics. This design allows for consistency and ease of use in command-line programs, scripting, and other scenarios where input and output are essential.
+stdin − It stands for standard input, and is used for taking text as an input.
+
+stdout − It stands for standard output, and is used to text output of any command you type in the terminal, and then that output is stored in the stdout stream.
+
+stderr − It stands for standard error. It is invoked whenever a command faces an error, then that error message gets stored in this data stream.
+It should be noted that in Linux all these streams are treated as if they were files. Also, linux assigns unique values to each of these data streams.
+
+0 = stdin
+
+1 = stdout
+
+2 = stderr
+
+stdin
 
