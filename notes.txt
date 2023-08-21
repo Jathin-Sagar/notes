@@ -1431,3 +1431,11 @@ It should be noted that in Linux all these streams are treated as if they were f
 
 stdin
 
+
+>>skype download
+
+sudo apt update
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo apt install ./skypeforlinux-64.deb
+
+skype
