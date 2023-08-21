@@ -1439,3 +1439,45 @@ wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb
 
 skype
+
+>>postgres
+
+ Installing PostgreSQL
+To install PostgreSQL, first refresh your server’s local package index:
+
+sudo apt update
+Then, install the Postgres package along with a -contrib package that adds some additional utilities and functionality:
+
+sudo apt install postgresql postgresql-contrib
+Ensure that the service is started:
+
+sudo systemctl start postgresql.service
+
+postgres
+
+>>dbeaver
+
+wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo apt install ./dbeaver-ce_latest_amd64.deb
+sudo apt update
+
+bdeaver
+
+>>nginx
+
+sudo apt update
+sudo apt install nginx
+sudo systemctl nginx.service
+
+nginx
+
+>>docker
+
+sudo apt install ca-certificates curl gnupg lsb-release
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+
+docker 
