@@ -1514,3 +1514,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt update
 
 docker 
+>>jenkins
+https://www.tutorialspoint.com/jenkins/jenkins_configuration.htm
+
+jenkins
