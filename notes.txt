@@ -1518,3 +1518,10 @@ docker
 https://www.tutorialspoint.com/jenkins/jenkins_configuration.htm
 
 jenkins
+
+
+>>fastupsystem
+ sync; echo 1 > /proc/sys/vm/drop_caches
+fastupsystem
+
+
