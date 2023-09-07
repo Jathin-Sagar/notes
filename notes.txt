@@ -1596,9 +1596,25 @@ Checkout to a sub-directory: You can configure Jenkins to checkout the source co
 Merge options for Git: If you're using Git, you can specify merge options for the repository. This can be useful for handling merge conflicts and specifying merge strategies.
 
 Ignore files in the checkout: You can specify files or patterns to be ignored during the checkout process.
-
 These additional behaviors provide flexibility and customization options to tailor Jenkins' interaction with your version control system to meet the specific needs of your software development and build process. The availability of these behaviors may depend on the SCM plugin you're using and its capabilities.
 
+These are common build triggers and scheduling options in Jenkins:
+
+Trigger builds remotely (e.g., from scripts):
+This option allows you to trigger a build in Jenkins remotely using an API token or a predefined token-based URL. It's often used when you want to initiate a build from an external script or service. Jenkins provides a URL that includes a token, and when a request is made to that URL with the token, Jenkins starts the specified job.
+
+Build after other projects are built:
+This option lets you configure a Jenkins job to trigger automatically when another job or set of jobs is successfully built. It helps establish dependencies between jobs, ensuring that certain jobs only run when their dependent jobs have successfully completed.
+
+Build periodically:
+Jenkins allows you to schedule builds at specific time intervals or using cron-like syntax. You can specify when and how often a job should run. For example, you can set up a nightly build or a weekly deployment. The syntax for specifying build periodicity is flexible and can be customized to suit your needs.
+
+GitHub hook trigger for GITScm polling:
+If your Jenkins job is configured to use Git as the source code management system and you want it to automatically build when changes are pushed to a connected GitHub repository, you can use this trigger. It sets up a webhook in GitHub that notifies Jenkins whenever a push or other relevant event occurs in the repository, triggering the associated build job.
+
+Poll SCM:
+This option enables Jenkins to periodically poll the source code repository for changes. When changes are detected, it triggers a build. You can specify the polling interval, and Jenkins will check for changes at regular intervals. This is useful when you don't have access to webhooks or other push-based triggers from your SCM system.
+Each of these trigger and scheduling options allows you to control when and how Jenkins starts a build job, providing flexibility in automating your software development and CI/CD processes. The choice of which trigger to use depends on your project's requirements and the tools and workflows you have in place.
 jenkins
 
 
