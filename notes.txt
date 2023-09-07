@@ -1517,6 +1517,22 @@ docker
 >>jenkins
 https://www.tutorialspoint.com/jenkins/jenkins_configuration.htm
 
+Discard Old Builds:
+This option allows you to specify how Jenkins should manage old build data to save disk space. You can set rules for when to discard old builds based on criteria like the number of builds to keep or how long to keep them.
+
+GitHub Project:
+When you check this option, you're telling Jenkins that your project is hosted on GitHub. Jenkins can then integrate more seamlessly with your GitHub repository. You can specify your GitHub project's URL, and Jenkins will use this information for better integration, such as setting up webhooks.
+
+This Project is Parameterized:
+Enabling this option means that your Jenkins job or pipeline can accept parameters when it's triggered. Parameters allow you to customize the behavior of your builds. For example, you can pass in different configuration options or version numbers as parameters.
+
+Throttle Builds:
+Throttling builds is a way to control the concurrency of builds in Jenkins. You can set limits on how many builds of a particular job can run concurrently. This is useful to prevent overloading your Jenkins server or to manage resources effectively.
+
+Execute Concurrent Builds If Necessary:
+This option is often used in conjunction with build throttling. If you enable this option, Jenkins will allow concurrent builds to run, even if the throttle limit for that job is reached. However, Jenkins will still respect the throttle limit and queue additional builds if necessary.
+These settings are part of Jenkins' flexibility and configurability, allowing you to tailor Jenkins to your specific project's needs and resource constraints. Depending on your project and Jenkins setup, you may or may not need to enable all of these options.
+
 jenkins
 
 
