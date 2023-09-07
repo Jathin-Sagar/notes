@@ -1282,7 +1282,8 @@ To find the exact location of your Jenkins Home directory, you can check the Jen
 Additionally, you can log in to your Jenkins dashboard as an administrator and navigate to "Manage Jenkins" > "Configure System." Under the "Home directory" section, you can see the path of the Jenkins Home directory.
 Keep in mind that the information provided here is based on my last update in September 2021, and the default directory for Jenkins might change in newer versions or based on updates to installation methods. For the most up-to-date information, please refer to the official Jenkins documentation or the documentation specific to your Jenkins installation.
 
-jnkinsdefault
+
+j4enkinsdefault
 
 >>dockered --help
 This command will display a detailed list of options and their explanations that you can use with dockerd. The available options may include configuration parameters related to network settings, storage drivers, authentication, logging, security, and more.
@@ -1532,6 +1533,32 @@ Throttling builds is a way to control the concurrency of builds in Jenkins. You 
 Execute Concurrent Builds If Necessary:
 This option is often used in conjunction with build throttling. If you enable this option, Jenkins will allow concurrent builds to run, even if the throttle limit for that job is reached. However, Jenkins will still respect the throttle limit and queue additional builds if necessary.
 These settings are part of Jenkins' flexibility and configurability, allowing you to tailor Jenkins to your specific project's needs and resource constraints. Depending on your project and Jenkins setup, you may or may not need to enable all of these options.
+
+Source Code Management:
+
+This section allows you to specify how Jenkins should manage and retrieve your source code, which is typically stored in a version control system like Git.
+Git:
+
+Selecting "Git" under "Source Code Management" indicates that your project is using Git for version control.
+
+Repositories:
+This is where you specify the URL of the Git repository that contains your project's source code. Jenkins will use this URL to fetch the code during the build process.
+
+Add Repository:
+If your project involves multiple Git repositories, you can use the "Add Repository" button to specify additional repository URLs. This is helpful when your project has dependencies stored in different repositories.
+
+Branches to Build:
+In this section, you can specify which branches of your Git repository Jenkins should build. By default, it's set to build all branches, but you can customize this based on your needs.
+Branch Specifier (blank for 'any'):
+
+Here, you can specify a branch specifier pattern to filter which branches Jenkins should build. For example, using "*/master" means that Jenkins will only build the "master" branch. If left blank or set to "any," Jenkins will build all branches.
+
+Repository Browser:
+This setting allows you to specify a web-based repository browser for viewing your Git repository. Jenkins can integrate with repository browsers to provide links and information related to your code changes.
+
+Additional Behaviours:
+This section provides advanced options for customizing how Jenkins interacts with your Git repository. It allows you to configure behaviors like checking out submodules, pruning stale branches, or specifying custom Git executable paths.
+These settings are crucial for configuring Jenkins to fetch your source code from Git and determine which branches or changes trigger builds. The specific configuration you choose depends on your project's requirements and Git repository structure.
 
 jenkins
 
