@@ -1555,10 +1555,49 @@ Here, you can specify a branch specifier pattern to filter which branches Jenkin
 
 Repository Browser:
 This setting allows you to specify a web-based repository browser for viewing your Git repository. Jenkins can integrate with repository browsers to provide links and information related to your code changes.
+In the Jenkins "Repository Browser" configuration section, you specify the web-based tool or service that Jenkins should use to display and browse the contents of your version control system (VCS) repository. This feature is especially useful for integrating Jenkins with external tools that provide a web interface for inspecting code changes, commit history, and other repository-related information. Here's what you can typically find in the "Repository Browser" configuration:
+
+None:
+
+This option indicates that you don't want to use any specific web-based repository browser. Jenkins won't provide links or integration with a browser in this case.
+Auto:
+
+When you select "Auto," Jenkins will attempt to automatically determine the appropriate repository browser based on the URL of the repository. It will use the repository hosting platform's default browser if possible. This is a convenient option when your repository is hosted on a well-known platform like GitHub, GitLab, or Bitbucket.
+Custom:
+
+In some cases, you may need to specify a custom repository browser if your repository is hosted on a less common platform or if you have a custom setup. With the "Custom" option, you can enter the URL pattern that Jenkins should use to construct links to your repository. You'll typically use placeholders like $REPO and $REVISION in the URL pattern to dynamically generate links to specific commits or files in the repository.
+The "Repository Browser" setting primarily affects how Jenkins generates links in the build results and change logs. For example, clicking on a build result might take you to the commit history or diff view of the repository browser you've configured. This enhances the integration between Jenkins and your version control system, making it easier to navigate and understand the changes made in each build.
+
+The specific repository browsers available depend on the plugins and integrations you have installed in your Jenkins environment. Popular repository hosting platforms like GitHub, GitLab, and Bitbucket typically have Jenkins plugins that simplify the configuration of the repository browser.
 
 Additional Behaviours:
 This section provides advanced options for customizing how Jenkins interacts with your Git repository. It allows you to configure behaviors like checking out submodules, pruning stale branches, or specifying custom Git executable paths.
 These settings are crucial for configuring Jenkins to fetch your source code from Git and determine which branches or changes trigger builds. The specific configuration you choose depends on your project's requirements and Git repository structure.
+The "Additional Behaviours" section in Jenkins, particularly in the "Source Code Management" (SCM) configuration, allows you to specify additional actions or behaviors to be applied when Jenkins interacts with your version control system (VCS) repository. These behaviors enhance and customize how Jenkins manages and interacts with your source code. The available additional behaviors can vary depending on the SCM system you are using and the Jenkins plugins installed. Here are some common behaviors you might find:
+
+Clean before checkout: This behavior can be used to clean the workspace (delete all files) before checking out the source code from the repository. It ensures that the workspace is in a clean state before building the project.
+
+Advanced clone behaviors: Some SCMs, like Git, allow you to specify advanced clone options, such as shallow cloning or specifying specific depth. These options can be configured in this section.
+
+Sparse Checkout: This feature allows you to specify a list of paths within the repository to be checked out, while ignoring the rest. It's useful when you only need a subset of files or directories from the repository.
+
+Polling ignores commits: You can configure Jenkins to ignore specific commits when polling for changes. This is useful when you want to filter out changes made by specific users, commit messages, or patterns.
+
+Sparse Checkout paths: Similar to sparse checkout, but allows you to specify a list of paths to exclude from the checkout. You can use it to exclude certain files or directories from being checked out.
+
+Additional environment variables: This behavior lets you define custom environment variables that are set during the build process. These variables can be used to customize the build based on the branch or other criteria.
+
+Custom workspace: You can specify a custom workspace location for this job. This is helpful when you want to store workspace data in a specific directory.
+
+Sparse Checkout paths for Subversion: Specific to Subversion, this behavior allows you to define sparse checkout paths.
+
+Checkout to a sub-directory: You can configure Jenkins to checkout the source code to a sub-directory within the workspace. This is useful when you want to keep the workspace organized by placing source code in a sub-folder.
+
+Merge options for Git: If you're using Git, you can specify merge options for the repository. This can be useful for handling merge conflicts and specifying merge strategies.
+
+Ignore files in the checkout: You can specify files or patterns to be ignored during the checkout process.
+
+These additional behaviors provide flexibility and customization options to tailor Jenkins' interaction with your version control system to meet the specific needs of your software development and build process. The availability of these behaviors may depend on the SCM plugin you're using and its capabilities.
 
 jenkins
 
