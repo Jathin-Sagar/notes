@@ -1684,7 +1684,11 @@ This step lets you publish HTML-based reports generated during the build, such a
 These are just a few examples of the build steps available in Jenkins. The choice of build steps depends on your project's requirements and the tools you use in your build process. Jenkins provides flexibility in defining and customizing build steps to automate your CI/CD pipelines effectively.
 jenkins
 
-
+>>vim
+vim package installation
+  apt-get update
+  apt-get install vim
+vim
 >>fastupsystem
  sync; echo 1 > /proc/sys/vm/drop_caches
 fastupsystem
