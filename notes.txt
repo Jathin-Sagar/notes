@@ -1640,6 +1640,48 @@ This option allows Jenkins to monitor the progress of a build job. If a build ap
 With Ant:
 If your build job involves Ant (Apache Ant) scripts, you can configure this build environment to use Ant as the build tool. Jenkins will set up the necessary environment variables and paths for Ant to execute your build tasks.
 Each of these build environment options serves a specific purpose and can be used to tailor the build process to your project's requirements. The choice of which options to use depends on your specific use case and workflow.
+
+In Jenkins, "Build Steps" refer to the series of actions or tasks that Jenkins performs as part of a build job. These steps are defined in the build configuration of a Jenkins job and outline how the build process should be executed. Build steps can include various types of actions, such as compiling code, running tests, packaging applications, and more. Here are common types of build steps that you can find in Jenkins:
+//////////////////////build steps/////////////////////////////////
+Execute Shell:
+This build step allows you to run shell commands or scripts on the Jenkins agent's operating system. You can use this step to perform various tasks like compiling code, running tests, and deploying applications.
+
+Execute Windows batch command:
+Similar to the Execute Shell step, but designed for Windows-based agents. You can run Windows batch commands or scripts in this step.
+
+Invoke Ant:
+If your build process involves Apache Ant scripts, you can use this step to execute Ant targets. Jenkins will set up the necessary environment variables and invoke Ant with the specified build file and target.
+
+Invoke Gradle script:
+If you use Gradle as your build tool, this step allows you to run Gradle tasks. You can specify the Gradle wrapper or a specific Gradle installation.
+
+Invoke top-level Maven targets:
+For projects built with Apache Maven, this step lets you run Maven goals. You can specify the Maven version and goals to execute.
+
+Run with timeout:
+This step allows you to set a timeout for a specific build step. If the step does not complete within the specified time, Jenkins will abort it.
+
+Archive the artifacts:
+After a build, you can archive specific files or directories as build artifacts. These artifacts can be used in downstream jobs or retrieved for deployment.
+
+Copy artifacts from another project:
+If your Jenkins setup includes multiple jobs, this step enables you to copy build artifacts from one job to another. It's useful for creating a continuous delivery pipeline.
+
+Delete workspace when the build is done:
+This step deletes the workspace (working directory) used for the build once the build is completed. It ensures a clean workspace for the next build.
+Set build status to "SUCCESS" or "FAILURE":
+
+You can explicitly set the build status to either "SUCCESS" or "FAILURE" using this step. This can be useful for customizing build result reporting.
+
+Conditional steps (with plugins):
+Jenkins provides plugins like "Conditional BuildStep" that allow you to define conditional logic in your build steps. For example, you can run a step only if a specific condition is met.
+
+Publish JUnit test result report:
+If you run unit tests in your build, you can use this step to publish the test results in JUnit format. Jenkins will display test reports and trends.
+
+Publish HTML reports:
+This step lets you publish HTML-based reports generated during the build, such as code coverage reports or documentation.
+These are just a few examples of the build steps available in Jenkins. The choice of build steps depends on your project's requirements and the tools you use in your build process. Jenkins provides flexibility in defining and customizing build steps to automate your CI/CD pipelines effectively.
 jenkins
 
 
