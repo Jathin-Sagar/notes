@@ -1693,6 +1693,7 @@ vim
  sync; echo 1 > /proc/sys/vm/drop_caches
 fastupsystem
 >>trivy installation
+
 wget https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.3_Linux-64bit.deb
 sudo dpkg -i trivy_0.18.3_Linux-64bit.deb
 
