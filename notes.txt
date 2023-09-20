@@ -1698,3 +1698,11 @@ wget https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.
 sudo dpkg -i trivy_0.18.3_Linux-64bit.deb
 
 trivy
+
+>>brave-browser
+sudo apt install apt-transport-https curl
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+brave-browser --version
+brave-browser
